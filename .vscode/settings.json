@@ -1,3 +1,6 @@
 {
-    "makefile.buildLog": ""
+    "makefile.buildLog": "",
+    "conventionalCommits.scopes": [
+        "CI/CD"
+    ]
 }
