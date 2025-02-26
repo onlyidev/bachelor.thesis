@@ -3,10 +3,7 @@
 \subsection{Tyrimo objektas ir aktualumas}
 
 Pagrindinis tyrimo objektas -- varžymosi principais grįstos atakos prieš
-kenkėjiškų programų detektorius. Šios atakos skirtos kenkėjiškų programų
-obfuskacijai specifiškai prieš dirbtinio intelekto klasifikatorius. Būtent
-dirbtinio intelekto klasifikatoriai šiuo metu yra labiausiai paplitę kenkėjiškų
-programų aptikimo industrijoje.
+kenkėjiškų programų detektorius. Varžymosi principais grįstos atakos -- tai subtilus duomenų modifikacijos metodas. Šių atakų metu duomenys pakeičiami nežymiai, tačiau tokiu būdu, jog geba suklaidinti jiems pritaikytus dirbtiniu intelektu įgyvendintus klasifikatorius. Vienas iš tokių atakų panaudojimo atvejų -- kenkėjiškų programų obfuskacija -- procesas, kurio metu kenkėjiškos programos pakeičiamos taip, jog jų veikimas išlieka toks pat, tačiau kenkėjiškų programų detektoriai šių modifikuotų programų neaptinka (klasifikuoja kaip nekenksmingas). Kadangi dauguma kenkėjiškų programų detektorių yra įgyvendinti kaip dirbtinio intelekto algoritmai ar modeliai, svarbu ieškoti būdu aptikti tokias atakas. Vienas iš galimų ir mokslinėje literatūroje minimų būdų varžymosi principais grįstų atakų aptikimui -- dirbtinio intelekto modelio priimtų sprendimų paaiškinimas ir jo analizė. Kadangi šiuolaikiniai dirbtinio intelekto modeliai yra sudėtingi, daugiadimensiai ir sunkiai ar visiškai neinterpretuojami, modelio sprendimų priėmimo paaiškinimas suprantamas kaip paprastesnio (klasikinio statistinio) modelio ar metodo panaudojimas suprantamesnei atskiro atvejo klasifikacijos ir klasifikavimo proceso interpretacijai.
 
 \subsection{Darbo tikslas}
 
@@ -31,7 +28,6 @@ paaiškinimui.
     \item Klasifikavimo proceso praplėtimas atskleidžia atakų vektorius.
 \end{enumerate}
 
-\pagebreak
 \subsection{Tyrimo metodai}
 
 \begin{enumerate}
