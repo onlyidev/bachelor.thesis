@@ -15,22 +15,23 @@ paaiškinimui.
 \subsubsection{Uždaviniai}
 \begin{enumerate}
     \item Apibrėžti varžymosi principais grįstų atakų aptikimo metodą naudojant LIME (\textit{angl. Local Interpretable Model-Agnostic Explanations}).
-    \item Pritaikyti varžymosi principais grįstų atakų aptikimą dvejetainius požymių vektorius naudojantiems modeliams taikant dimensijų redukavimo metodus.
+    \item Pritaikyti varžymosi principais grįstų atakų aptikimą dvejetainius požymių vektorius naudojantiems modeliams taikant dimensijų mažinimo metodus.
     \item Sukurti klasifikavimo proceso praplėtimą į jį įtraukiant varžymosi principais
           grįstų atakų aptikimą.
-    \item Ištirti praplėsto klasifikavimo proceso efektyvumą.
+    \item Ištirti praplėsto klasifikavimo proceso tikslumą.
 \end{enumerate}
 
 \subsubsection{Laukiami rezultatai}
 \begin{enumerate}
     \item Sukurtas varžymosi principais pagrįstų atakų aptikimo metodas, pritaikomas bet kokiam kenkėjiškų programų detektoriui.
     \item Laikantis klasifikavimo proceso praplėtimo aptinkama daugiau obfuskuotų kenkėjiškų programų, nei jo nesilaikant.
-    \item Klasifikavimo proceso praplėtimas atskleidžia atakų vektorius.
+    \item Klasifikavimo proceso praplėtimas paaiškinamo dirbtinio intelekto metodu padeda nustatyti pažeidžiamus požymius (modelio silpnąsias vietas)
 \end{enumerate}
 
 \subsection{Tyrimo metodai}
 
 \begin{enumerate}
+    \item \textbf{Literatūros analizė}.
     \item \textbf{Modeliavimo metodas}. Klasifikavimo proceso praplėtimo tyrime bus naudojami šie modeliai:
     \begin{itemize}
         \item kenkėjiškų programų klasifikatoriaus modelis, įgyvendintas kaip mašininio mokymosi algoritmas,
@@ -43,10 +44,12 @@ paaiškinimui.
 
 \begin{enumerate}
     \item Literatūros analizė.
-    \item Prieiga prie kenkėjiškų ir nekenkėjiškų programų požymių duomenų rinkinio \textit{SLEIPNIR}.
-    \item \textit{MalGAN} karkaso ir kenkėjiškų programų detektoriaus modelių mokymas.
+    \item Kenkėjiškų ir nekenkėjiškų programų požymių duomenų rinkinio pasirinkimas.
+    \item Varžymosi principais grįstų atakų karkaso ir kenkėjiškų programų detektoriaus modelio mokymas.
     \item \textit{LIME} komponento paruošimas varžymosi principais grįstų atakų aptikimui ir paaiškinimui (\textit{normalių požymių} aibės kūrimas iš mokymosi duomenų rinkinio).
-    \item Dvejetainių požymių vektorių supaprastinimas redukuojant dimensijas (naudojant \textit{Multiple Correspondence Analysis} mokymosi duomenims) ir šio komponento integracija su \textit{LIME} komponentu.
+    \item Dvejetainių požymių vektorių supaprastinimas mažinant dimensijas ir šio komponento integracija su \textit{LIME} komponentu.
     \item Klasifikavimo proceso praplėtimo apibrėžimas ir iliustracijų rengimas.
-    \item Klasifikavimo proceso praplėtimo efektyvumo tyrimas taikant lyginamąją analizę.
+    \item Klasifikavimo proceso praplėtimo tikslumo tyrimas taikant lyginamąją analizę.
 \end{enumerate}
+
+\subsection{Literatūros šaltiniai}
