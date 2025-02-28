@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.0](https://github.com/onlyidev/bachelor.thesis/compare/v0.1.0...v0.2.0) (2025-02-28)
+
+
+### Features
+
+* **plan:** Add literature description and bibliography. ([959b357](https://github.com/onlyidev/bachelor.thesis/commit/959b357b1db5882a72222091a0e9117d2fbf5048))
+
+
+### Bug Fixes
+
+* **plan:** Adjust para-1 ([ceb15d5](https://github.com/onlyidev/bachelor.thesis/commit/ceb15d5292003bc71e7cdddc3925792cfe926565))
+* **plan:** Review comment fixes ([a62a9e2](https://github.com/onlyidev/bachelor.thesis/commit/a62a9e2e37142ad8c9c010e1a9695694a2e2a621))
+
 ## [0.1.0](https://github.com/onlyidev/bachelor.thesis/compare/v0.0.1...v0.1.0) (2025-02-23)
 
 
