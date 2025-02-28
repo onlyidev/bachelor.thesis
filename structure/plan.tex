@@ -3,7 +3,23 @@
 \subsection{Tyrimo objektas ir aktualumas}
 
 Pagrindinis tyrimo objektas -- varžymosi principais grįstos atakos prieš
-kenkėjiškų programų detektorius. Varžymosi principais grįstos atakos -- tai subtilus duomenų modifikacijos metodas. Šių atakų metu duomenys pakeičiami nežymiai, tačiau tokiu būdu, jog geba suklaidinti jiems pritaikytus dirbtiniu intelektu įgyvendintus klasifikatorius. Vienas iš tokių atakų panaudojimo atvejų -- kenkėjiškų programų obfuskacija -- procesas, kurio metu kenkėjiškos programos pakeičiamos taip, jog jų veikimas išlieka toks pat, tačiau kenkėjiškų programų detektoriai šių modifikuotų programų neaptinka (klasifikuoja kaip nekenksmingas). Kadangi dauguma kenkėjiškų programų detektorių yra įgyvendinti kaip dirbtinio intelekto algoritmai ar modeliai, svarbu ieškoti būdu aptikti tokias atakas. Vienas iš galimų ir mokslinėje literatūroje minimų būdų varžymosi principais grįstų atakų aptikimui -- dirbtinio intelekto modelio priimtų sprendimų paaiškinimas ir jo analizė. Kadangi šiuolaikiniai dirbtinio intelekto modeliai yra sudėtingi, daugiadimensiai ir sunkiai ar visiškai neinterpretuojami, modelio sprendimų priėmimo paaiškinimas suprantamas kaip paprastesnio (klasikinio statistinio) modelio ar metodo panaudojimas suprantamesnei atskiro atvejo klasifikacijos ir klasifikavimo proceso interpretacijai.
+kenkėjiškų programų detektorius. Varžymosi principais grįstos atakos -- tai
+subtilus duomenų modifikacijos metodas. Šių atakų metu duomenys pakeičiami
+nežymiai, tačiau tokiu būdu, jog geba suklaidinti jiems pritaikytus dirbtiniu
+intelektu įgyvendintus klasifikatorius. Vienas iš tokių atakų panaudojimo
+atvejų -- kenkėjiškų programų obfuskacija -- procesas, kurio metu kenkėjiškos
+programos pakeičiamos taip, jog jų veikimas išlieka toks pat, tačiau kenkėjiškų
+programų detektoriai šių modifikuotų programų neaptinka (klasifikuoja kaip
+nekenksmingas). Kadangi dauguma kenkėjiškų programų detektorių yra įgyvendinti
+kaip dirbtinio intelekto algoritmai ar modeliai, svarbu ieškoti būdu aptikti
+tokias atakas. Vienas iš galimų ir mokslinėje literatūroje minimų būdų
+varžymosi principais grįstų atakų aptikimui -- dirbtinio intelekto modelio
+priimtų sprendimų paaiškinimas ir jo analizė. Kadangi šiuolaikiniai dirbtinio
+intelekto modeliai yra sudėtingi, daugiadimensiai ir sunkiai ar visiškai
+neinterpretuojami, modelio sprendimų priėmimo paaiškinimas suprantamas kaip
+paprastesnio (klasikinio statistinio) modelio ar metodo panaudojimas
+suprantamesnei atskiro atvejo klasifikacijos ir klasifikavimo proceso
+interpretacijai.
 
 \subsection{Darbo tikslas}
 
@@ -14,8 +30,10 @@ paaiškinimui.
 
 \subsubsection{Uždaviniai}
 \begin{enumerate}
-    \item Apibrėžti varžymosi principais grįstų atakų aptikimo metodą naudojant LIME (\textit{angl. Local Interpretable Model-Agnostic Explanations}).
-    \item Pritaikyti varžymosi principais grįstų atakų aptikimą dvejetainius požymių vektorius naudojantiems modeliams taikant dimensijų mažinimo metodus.
+    \item Apibrėžti varžymosi principais grįstų atakų aptikimo metodą naudojant LIME
+          (\textit{angl. Local Interpretable Model-Agnostic Explanations}).
+    \item Pritaikyti varžymosi principais grįstų atakų aptikimą dvejetainius požymių
+          vektorius naudojantiems modeliams taikant dimensijų mažinimo metodus.
     \item Sukurti klasifikavimo proceso praplėtimą į jį įtraukiant varžymosi principais
           grįstų atakų aptikimą.
     \item Ištirti praplėsto klasifikavimo proceso tikslumą.
@@ -23,9 +41,12 @@ paaiškinimui.
 
 \subsubsection{Laukiami rezultatai}
 \begin{enumerate}
-    \item Sukurtas varžymosi principais pagrįstų atakų aptikimo metodas, pritaikomas bet kokiam kenkėjiškų programų detektoriui.
-    \item Laikantis klasifikavimo proceso praplėtimo aptinkama daugiau obfuskuotų kenkėjiškų programų, nei jo nesilaikant.
-    \item Klasifikavimo proceso praplėtimas paaiškinamo dirbtinio intelekto metodu padeda nustatyti pažeidžiamus požymius (modelio silpnąsias vietas)
+    \item Sukurtas varžymosi principais pagrįstų atakų aptikimo metodas, pritaikomas bet
+          kokiam kenkėjiškų programų detektoriui.
+    \item Laikantis klasifikavimo proceso praplėtimo aptinkama daugiau obfuskuotų
+          kenkėjiškų programų, nei jo nesilaikant.
+    \item Klasifikavimo proceso praplėtimas paaiškinamo dirbtinio intelekto metodu padeda
+          nustatyti pažeidžiamus požymius (modelio silpnąsias vietas)
 \end{enumerate}
 
 \subsection{Tyrimo metodai}
@@ -33,10 +54,12 @@ paaiškinimui.
 \begin{enumerate}
     \item \textbf{Literatūros analizė}.
     \item \textbf{Modeliavimo metodas}. Klasifikavimo proceso praplėtimo tyrime bus naudojami šie modeliai:
-    \begin{itemize}
-        \item kenkėjiškų programų klasifikatoriaus modelis, įgyvendintas kaip mašininio mokymosi algoritmas,
-        \item varžymosi principais grįstų atakų generavimo modelis, įgyvendintas kaip \textit{MalGAN} karkasą atitinkantis mašinino mokymosi modelis.
-    \end{itemize}
+          \begin{itemize}
+              \item kenkėjiškų programų klasifikatoriaus modelis, įgyvendintas kaip mašininio
+                    mokymosi algoritmas,
+              \item varžymosi principais grįstų atakų generavimo modelis, įgyvendintas kaip
+                    \textit{MalGAN} karkasą atitinkantis mašinino mokymosi modelis.
+          \end{itemize}
     \item \textbf{Lyginamosios analizės metodas}. Lyginami klasifikavimo (kenkėjiškų programų aptikimo) rezultatai taikant klasifikavimo proceso praplėtimą ir jo netaikant.
 \end{enumerate}
 
@@ -45,11 +68,28 @@ paaiškinimui.
 \begin{enumerate}
     \item Literatūros analizė.
     \item Kenkėjiškų ir nekenkėjiškų programų požymių duomenų rinkinio pasirinkimas.
-    \item Varžymosi principais grįstų atakų karkaso ir kenkėjiškų programų detektoriaus modelio mokymas.
+    \item Varžymosi principais grįstų atakų karkaso ir kenkėjiškų programų detektoriaus
+          modelio mokymas.
     \item \textit{LIME} komponento paruošimas varžymosi principais grįstų atakų aptikimui ir paaiškinimui (\textit{normalių požymių} aibės kūrimas iš mokymosi duomenų rinkinio).
-    \item Dvejetainių požymių vektorių supaprastinimas mažinant dimensijas ir šio komponento integracija su \textit{LIME} komponentu.
+    \item Dvejetainių požymių vektorių supaprastinimas mažinant dimensijas ir šio
+          komponento integracija su \textit{LIME} komponentu.
     \item Klasifikavimo proceso praplėtimo apibrėžimas ir iliustracijų rengimas.
     \item Klasifikavimo proceso praplėtimo tikslumo tyrimas taikant lyginamąją analizę.
 \end{enumerate}
 
-\subsection{Literatūros šaltiniai}
+\subsection{Literatūros šaltinių apibūdinimas}
+
+Mokslinėje literatūroje aptariami varžymosi principais grįstų atakų kūrimo
+karkasai. Vienas iš populiariausių -- \textit{MalGAN}
+karkasas~\cite{huGeneratingAdversarialMalware2017} dažnai naudojamas kaip
+bazinis tolimesniems tyrimams. Apie paaiškinamo dirbtinio intelekto
+(specifiškai \textit{LIME}~\cite{ribeiroWhyShouldTrust2016}) naudojimą įsilaužimo aptikimo sistemose
+(\textit{angl. Intrusion Detection Systems, IDS}) siekiant aptikti varžymosi
+principais grįstas atakas kalba Tcydenova et
+al.~\cite{tcydenovaDetectionAdversarialAttacks2021}. \textit{IDS} yra realiu
+laiku veikiančios ir dažniausiai dinaminius požymius analizuojančios sistemos,
+tačiau šis tyrimas apsiriboja statinių požymių, kurių apibendrinimą atliko
+Demetrio et al.~\cite{demetrioAdversarialEXEmplesSurvey2021}, analize.
+Potencialūs statinių požymių rinkiniai, kurie gali būti tinkami šiam tyrimui
+yra \textit{EMBER}~\cite{andersonEMBEROpenDataset2018a} ir
+\textit{SLEIPNIR}~\cite{al-dujailiAdversarialDeepLearning2018}.

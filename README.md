@@ -9,10 +9,10 @@
   - [x]  studento vardas ir pavardė
   - [x]  vadovo pareigos, vardas ir pavardė
   - [x]  miestas, metai
-- [ ] darbo planas
+- [x] darbo planas
   - [x]  tyrimo objektas ir aktualumas
   - [x]  darbo tikslas
   - [x]  keliami uždaviniai ir laukiami rezultatai
   - [x]  tyrimo metodai
   - [x]  numatomas darbo atlikimo procesas
-  - [ ]  apibūdinami darbui aktualūs literatūros šaltiniai
+  - [x]  apibūdinami darbui aktualūs literatūros šaltiniai
