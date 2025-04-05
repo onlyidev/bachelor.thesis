@@ -10,30 +10,51 @@ on:
       - closed
 
 concurrency: preview-${{ github.ref }}
+
 env:
   BUILD_PATH: "." # default value when not using subfolders
   TEX_NAME: main
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy-preview:
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install and Build
-        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
           root_file: ${{ env.TEX_NAME }}.tex
           latexmk_use_lualatex: true
       - name: Prepare dist directory
-        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         run: |
           mv ${{ env.TEX_NAME }}.pdf dist
           sed -i 's/$NAME/${{ env.TEX_NAME }}/' dist/index.html
-
-      - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          source-dir: ./dist/
+          name: dev-page
+          path: ${{ env.BUILD_PATH }}/dist
+
+  deploy:
+    environment:
+      name: dev
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: dev-page
+          preview: true
