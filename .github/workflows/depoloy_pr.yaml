@@ -10,6 +10,9 @@ on:
       - closed
 
 concurrency: preview-${{ github.ref }}
+env:
+  BUILD_PATH: "." # default value when not using subfolders
+  TEX_NAME: main
 
 jobs:
   deploy-preview:
@@ -29,7 +32,7 @@ jobs:
         run: |
           mv ${{ env.TEX_NAME }}.pdf dist
           sed -i 's/$NAME/${{ env.TEX_NAME }}/' dist/index.html
-          
+
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
