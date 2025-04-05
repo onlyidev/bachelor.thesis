@@ -1,0 +1,36 @@
+# .github/workflows/preview.yml
+name: Deploy PR previews
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+concurrency: preview-${{ github.ref }}
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install and Build
+        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: ${{ env.TEX_NAME }}.tex
+          latexmk_use_lualatex: true
+      - name: Prepare dist directory
+        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
+        run: |
+          mv ${{ env.TEX_NAME }}.pdf dist
+          sed -i 's/$NAME/${{ env.TEX_NAME }}/' dist/index.html
+          
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./dist/
