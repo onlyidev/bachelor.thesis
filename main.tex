@@ -4,56 +4,20 @@
 %%%%
 \documentclass[]{VUMIFTemplateClass}
 
-\usepackage{indentfirst}
-\usepackage{amsmath, amsthm, amssymb, amsfonts}
-\usepackage{mathtools}
-\usepackage{physics}
-\usepackage{graphicx}
-\usepackage{verbatim}
-\usepackage[hidelinks]{hyperref}
-\usepackage{color,algorithm,algorithmic}
-\usepackage[nottoc]{tocbibind}
-\usepackage{tocloft}
+\input{setups/packages}
 
-\usepackage{titlesec}
-\newcommand{\sectionbreak}{\clearpage}
+\input{setups/commands}
+\input{setups/title}
 
-\makeatletter
-\renewcommand{\fnum@algorithm}{\thealgorithm}
-\makeatother
-\renewcommand\thealgorithm{\arabic{algorithm} algoritmas}
-
-\usepackage{biblatex}
-\bibliography{bib}
-%% norint pakeisti bibliografijos šaltinių numeravimą (skaitiniu arba raidiniu), pakeitimus atlikti VUMIFTemplateClass.cls 150 eilutėje
-
-% Author's MACROS
-\newcommand{\EE}{\mathbb{E}\,} % Mean
-\newcommand{\ee}{{\mathrm e}}  % nice exponent
-\newcommand{\RR}{\mathbb{R}}
-
-
-\studijuprograma{Programų sistemų} %Studijų programą įrašyti kilmininko linksniu (pavyzdžiui – Programų sistemų, Finansų ir draudimų matematikos ir t. t.)
-\darbotipas{Bakalauro baigiamojo darbo planas} % Bakalauro baigiamasis darbas arba magistro baigiamasis darbas
-\darbopavadinimas{Varžymosi principais grįstų atakų aptikimas naudojant paaiškinamo dirbtinio intelekto metodą kenkėjiškų programų kontekste}
-\darbopavadinimasantras{Defense Against Adversarial Malware Obfuscation Attacks Using Explainable Artificial Intelligence}
-\autorius{Liudas Kasperavičius}
-
-%Autorių gali būti ir daugiau, tuo atveju, kiekvienas autorius rašomas iš naujos eilutės, ir pridedamas titulinis.tex arba dvigubasTitulinis.tex dokumentuose
-%\antrasautorius{Vardas Pavardė} %Jei toks yra, kitu atveju ištrinti
-
-\vadovas{prof. dr. Olga Kurasova}
-% \recenzentas{pedagoginis/mokslinis vardas Vardas Pavardė} %Jei toks yra žinomas, kitu atveju ištrinti
-% \moksliniskonsultantas{pedagoginis/mokslinis vardas Vardas Pavardė} %Jei toks yra žinomas, kitu atveju ištrinti
-
-\begin{document}
-\selectlanguage{lithuanian}
-
+%Turinys
+\tableofcontents
 \onehalfspacing
-\input{titulinis}
 
-\input{structure/plan.tex}
+\printnoidxglossaries
+\clearpage
+
 
 \printbibliography[title = {Literatūra ir šaltiniai}]
+
 
 \end{document}
