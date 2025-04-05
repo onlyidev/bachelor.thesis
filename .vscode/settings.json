@@ -1,9 +1,0 @@
-{
-    "makefile.buildLog": "",
-    "conventionalCommits.scopes": [
-        "CI/CD"
-    ],
-    "cSpell.enabledFileTypes": {
-        "latex": true
-    }
-}
