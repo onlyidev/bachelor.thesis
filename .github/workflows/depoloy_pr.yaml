@@ -16,12 +16,10 @@ env:
   TEX_NAME: main
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
-  deploy-preview:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,7 +36,19 @@ jobs:
         run: |
           mv ${{ env.TEX_NAME }}.pdf dist
           sed -i 's/$NAME/${{ env.TEX_NAME }}/' dist/index.html
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview
+          path: ${{ env.BUILD_PATH }}/dist
 
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: preview
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
