@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/onlyidev/bachelor.thesis/compare/v0.2.0...v0.3.0) (2025-04-05)
+
+
+### Features
+
+* **sections:** Add course work intro ([1dc3ae9](https://github.com/onlyidev/bachelor.thesis/commit/1dc3ae95de96b990c009216397d79ea815a822b1))
+
 ## [0.2.0](https://github.com/onlyidev/bachelor.thesis/compare/v0.1.0...v0.2.0) (2025-02-28)
 
 
