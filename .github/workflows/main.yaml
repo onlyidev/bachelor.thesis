@@ -44,18 +44,25 @@ jobs:
           mv ${{ env.TEX_NAME }}.pdf dist
           sed -i 's/$NAME/${{ env.TEX_NAME }}/' dist/index.html
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
+          name: prod
           path: ${{ env.BUILD_PATH }}/dist
 
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
     name: Deploy
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Download a single artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: prod
+          path: ./dist
+      - name: Deploy 🚀
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # The folder the action should deploy.
