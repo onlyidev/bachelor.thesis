@@ -39,13 +39,6 @@ jobs:
         with:
           root_file: ${{ env.TEX_NAME }}.tex
           latexmk_use_lualatex: true
-      - name: Add PDF to release
-        uses: svenstaro/upload-release-action@2.9.0
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ env.TEX_NAME }}.pdf
-          asset_name: Thesis.pdf
-          overwrite: true
       - name: Prepare dist directory
         run: |
           mv ${{ env.TEX_NAME }}.pdf dist
