@@ -1,52 +1,168 @@
 \newglossaryentry{signature}{
     name=Pėdsakas,
-    text=pėdsakas,
     description={Programos struktūros ir požymių santrauka, beveik unikaliai identifikuojanti programą (pvz., \gls{hashfunction})},
-    user1=pėdsako,
-    user2=pėdsakui,
-    user3=pėdsaką,
-    user4=pėdsaku,
-    user5=pėdsake,
+    text=pėdsakas,
+    ko=pėdsako,
+    kam=pėdsakui,
+    ka=pėdsaką,
+    kuo=pėdsaku,
+    kur=pėdsake,
     plural=pėdsakai,
+    plko=pėdsakų,
+    plkam=pėdsakams,
+    plka=pėdsakus,
+    plkuo=pėdsakais,
+    plkur=pėdsakuose,
 }
 
 \newglossaryentry{hashfunction}{
     name=Maišymo funkcija,
     text=maišymo funkcija,
     description={Tai funkcija $f: \set{0,1}^* \rightarrow \set{0,1}^m$. Naudojama, kai iš begalinės įvesčių erdvės norima gauti fiksuoto dydžio ($m$) išvestį},
-    user1=maišymo funkcijos,
-    user2=maišymo funkcijai,
-    user3=maišymo funkciją,
-    user4=maišymo funkcija,
-    user5=maišymo funkcijoje,
+    ko=maišymo funkcijos,
+    kam=maišymo funkcijai,
+    ka=maišymo funkciją,
+    kuo=maišymo funkcija,
+    kur=maišymo funkcijoje,
     plural=maišymo funkcijos,
+    plko=maišymo funkcijų,
+    plkam=maišymo funkcijoms,
+    plka=maišymo funkcijas,
+    plkuo=maišymo funkcijomis,
+    plkur=maišymo funkcijose,
 }
 
 \newglossaryentry{decisionBoundary}{
     name={Sprendimų priėmimo riba \angl{Decision Boundary}},
     description={Paprasčiausiems \gls{ml} modeliams tai yra kreivė plokštumoje. Sudėtingesniems -- daugiadimensiniams modeliams -- daugdara \angl{manifold}},
     text=sprendimų priėmimo riba,
-    user1=sprendimų priėmimo ribos,
-    user2=sprendimų priėmimo ribai,
-    user3=sprendimų priėmimo ribą,
-    user4=sprendimų priėmimo ribomis,
-    user5=sprendimų priėmimo ribose,
+    ko=sprendimų priėmimo ribos,
+    kam=sprendimų priėmimo ribai,
+    ka=sprendimų priėmimo ribą,
+    kuo=sprendimų priėmimo ribomis,
+    kur=sprendimų priėmimo ribose,
     plural=sprendimų priėmimo ribos,
+    plko=sprendimų priėmimo ribos,
+    plkam=sprendimų priėmimo riboms,
+    plka=sprendimų priėmimo ribas,
+    plkuo=sprendimų priėmimo ribomis,
+    plkur=sprendimų priėmimo ribose,
 }
 
 \newglossaryentry{adversarial}{
     name={Varžymosi principais pagrįstos atakos \angl{Adversarial Attacks}},
     description={Tai atakos, pritaikytos \enquote{apgauti} \gls{ml} klasifikatorius},
     text=varžymosi principais pagrįsta ataka,
-    user1=varžymosi principais pagrįstos atakos,
-    user2=varžymosi principais pagrįstai atakai,
-    user3=varžymosi principais pagrįstą ataką,
-    user4=varžymosi principais pagrįsta ataka,
-    user5=varžymosi principais pagrįstoje atakoje,
+    ko=varžymosi principais pagrįstos atakos,
+    kam=varžymosi principais pagrįstai atakai,
+    ka=varžymosi principais pagrįstą ataką,
+    kuo=varžymosi principais pagrįsta ataka,
+    kur=varžymosi principais pagrįstoje atakoje,
     plural=varžymosi principais pagrįstos atakos,
+    plko=varžymosi principais pagrįstų atakų,
+    plkam=varžymosi principais pagrįstoms atakoms,
+    plka=varžymosi principais pagrįstas atakas,
+    plkuo=varžymosi principais pagrįstomis atakomis,
+    plkur=varžymosi principais pagrįstose atakose,
+}
+
+\newglossaryentry{framework}{
+    name={Karkasas \angl{Framework}},
+    description={Nurodo specifines technologijas, naudojamus požymius ir perturbacijas, siekiamus tikslus \gls{ae} generacijai. Skirtas apibrėžti procesą ir įrankius, kuriuos naudojant būtų galima generuoti nurodytų tikslų siekiančius \gls{ae}},
+    text={karkasas},
+    ko=karkaso,
+    kam=karkasui,
+    ka=karkasą,
+    kuo=karkasu,
+    kur=karkase,
+    plural=karkasai,
+    plko=karkasų,
+    plkam=karkasams,
+    plka=karkasus,
+    plkuo=karkasais,
+    plkur=karkasuose,
+}
+
+\newglossaryentry{zeroSumGame}{
+    name={Nulinės sumos žaidimas \angl{Zero-Sum Game}},
+    description={Dviejų žaidėjų žaidimas, kuriame galimas vienas laimėtojas. Laimėtojo laimėta suma yra lygi pralaimėtojo pralaimėtai sumai},
+    text={nulinės sumos žaidimas},
+    ko=nulinės sumos žaidimo,
+    kam=nulinės sumos žaidimui,
+    ka=nulinės sumos žaidimą,
+    kuo=nulinės sumos žaidimu,
+    kur=nulinės sumos žaidime,
+    plural=nulinės sumos žaidimai,
+    plko=nulinės sumos žaidimų,
+    plkam=nulinės sumos žaidimams,
+    plka=nulinės sumos žaidimus,
+    plkuo=nulinės sumos žaidimais,
+    plkur=nulinės sumos žaidimuose,
+}
+
+\newglossaryentry{surrogateModel}{
+    name={Surogatinis Modelis \angl{Surrogate Model}},
+    description={\gls{ml} modelis, aproksimuojantis kitą \gls{ml} modelį, kurio parametrai (svoriai) nėra žinomi},
+    text={surogatinis modelis},
+    ko=surogatinio modelio,
+    kam=surogatiniam modeliui,
+    ka=surogatinį modelį,
+    kuo=surogatiniu modeliu,
+    kur=surogatiniame modelyje,
+    plural=surogatiniai modeliai,
+    plko=surogatinių modelių,
+    plkam=surogatiniams modeliams,
+    plka=surogatinius modelius,
+    plkuo=surogatiniais modeliais,
+    plkur=surogatiniuose modeliuose,
+}
+
+\newglossaryentry{policy}{
+    name={Strategija \angl{Policy}},
+    description={Tai funkcija $\pi : S \times A \rightarrow \set{0,1}$, čia $S$ -- galimų būsenų erdvė \angl{State Space}, $A$ -- galimų veiksmų erdvė \angl{Action Space}. Šią funkciją \gls{rl} modelis \enquote{išmoksta} mokymosi metu},
+    text={strategija \angl{policy}}
+    ko=strategijos,
+    kam=strategijai,
+    ka=strategiją,
+    kuo=strategija,
+    kur=strategijoje,
+    plural=strategijos,
+    plko=strategijų,
+    plkam=strategijoms,
+    plka=strategijas,
+    plkuo=strategijomis,
+    plkur=strategijose,
+}
+
+\newglossaryentry{qfunction}{
+    name={Q-Funkcija \angl{Q-Function}},
+    description={$Q: S \times A \rightarrow \mathbb{R}$, čia $S$~--~galimų būsenų erdvė \angl{State Space}, $A$~--~galimų veiksmų erdvė \angl{Action Space}},
+    text=$Q$-funkcija,
+    ko=$Q$-funkcijos,
+    kam=$Q$-funkcijai,
+    ka=$Q$-funkciją,
+    kuo=$Q$-funkcija,
+    kur=$Q$-funkcijoje,
+    plural=$Q$-funkcijos,
+    plko=$Q$-funkcijų,
+    plkam=$Q$-funkcijoms,
+    plka=$Q$-funkcijas,
+    plkuo=$Q$-funkcijomis,
+    plkur=$Q$-funkcijose,
 }
 
 % Acronyms
-\newacronym{ml}{ML}{mašininis mokymasis}
-\newacronym{di}{DI}{dirbtinis intelektas}
-\newacronym{ae}{AE}{varžymosi principais pagrįstomis atakomis obfuskuoti kenkėjiško kodo pavyzdžiai}
+\newacronym{ml}{ML}{Mašininis mokymasis \angl{machine learning}}
+\newacronym{di}{DI}{Dirbtinis intelektas \angl{artificial intelligence}}
+\newacronym{ae}{AE}{Varžymosi principais pagrįstomis atakomis obfuskuoti kenkėjiško kodo pavyzdžiai \angl{adversarial examples}}
+\newacronym{pe}{PE}{\Angl{portable executable}}
+\newacronym{dll}{DLL}{Dinamiškai susieta biblioteka \angl{dynamic link library}}
+\newacronym{api}{API}{\Angl{Application Programming Interface}}
+\newacronym{nlp}{NLP}{Skaitmeninis natūraliosios kalbos apdorojimas \angl{natural language processing}}
+\newacronym{gan}{GAN}{Generatyviniai priešiški tinklai \angl{generative adversarial networks}}
+\newacronym{svm}{SVM}{\Angl{support vector machine}}
+\newacronym{knn}{KNN}{\Angl{$K$-Nearest Neighbours}}
+\newacronym{gbdt}{GBDT}{\Angl{gradient boosted decision trees}}
+\newacronym{cnn}{CNN}{\Angl{convolutional neural network}}
+\newacronym{rl}{RL}{Skatinamasis mokymasis \angl{reinforcement learning}}
+\newacronym{genetic}{GA}{Genetiniais algoritmais pagrįstas \gls{ml} modelis \angl{genetic algorithm}}

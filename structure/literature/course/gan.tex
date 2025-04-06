@@ -1,0 +1,77 @@
+\subsection{GAN tipo modelių \glspl{framework}}\label{sec:literature:gan}
+
+\gls{gan} modelių karkasai paremti generatyviniais priešiškais tinklais (\gls{gan}), kurių veikimo principas yra du neuroniniai tinklai (generatorius ir diskriminatorius), žaidžiantys \gls{zeroSumGame} \cite{chenInfoGANInterpretableRepresentation2016a}. Kenkėjiško kodo obfuskacijos kontekste ir ypač \enquote{juodos dėžės} atvejais, diskriminatorius atlieka \gls{surrogateModel} vaidmenį. Bendras \gls{gan} modelių mokymosi etapas yra tokia seka \cite{huGeneratingAdversarialMalware2017,zhuNgramMalGANEvading2022,zhongMalFoxCamouflagedAdversarial2024}:
+\begin{enumerate}
+    \item Generatorius, naudodamas požymių vektorių ir tokios pačios dimensijos
+          \enquote{triukšmo} \angl{noise} vektorių, sugeneruoja perturbacijas.
+    \item Originali kenkėjiška programa modifikuojama pagal perturbacijas (sukuriamas
+          \gls{ae}).
+    \item Diskriminatorius klasifikuoja sugeneruotą \gls{ae} (kenkėjiškas /
+          nekenkėjiškas). Pagal klasifikacijos rezultatą skaičiuojamos diskriminatoriaus
+          ir generatoriaus nuostolių funkcijos reikšmės (diskriminatoriaus nuostolių
+          funkcijos reikšmė priklauso nuo tikro detektoriaus klasifikacijos).
+    \item Visa seka kartojama nustatytą kiekį kartų.
+\end{enumerate}
+
+\begin{describeFramework}{MalGAN}{\cite{huGeneratingAdversarialMalware2017}}
+    \introLastPar{
+        Tai vienas iš pirmųjų ir populiariausių \gls{gan} tipo modelių ERROR\gls{framework}. \enquote{Juodos dėžės} detektoriai čia apibrėžiami kaip populiarūs \gls{ml} klasifikatoriai, tokie, kaip MLP \angl{Multilayer Perceptron}, RF \angl{Random Forest}, DT \angl{Decision Tree}, \gls{svm} \angl{Support Vector Machine}.
+    }
+    \purpose{
+        Efektyviai išvengti \gls{ae} aptikimo, kai \gls{ml} kenkėjiškų programų detektoriaus įgyvendinimas nežinomas (\enquote{juodos dėžės} atvejis).
+    }
+    \surrogate{
+        Daugiasluoksnis tiesioginio sklidimo neuroninis tinklas -- klasifikatorius. Įvestis -- programos požymių vektorius. Išvestis -- klasifikacija į kenksmingą arba nekenksmingą. Šis tinklas taip pat naudojamas kaip diskriminatorius \gls{gan} architektūroje.
+    }
+    \mainModel{
+        Daugiasluoksnis tiesioginio sklidimo neuroninis tinklas. Įvestis -- programos požymių vektorius ir tokios pačios dimensijos \enquote{triukšmo} vektorius. Išvestis -- modifikuotas požymių vektorius. Šis tinklas naudojamas kaip generatorius \gls{gan} architektūroje.
+    }
+    \features{}{
+        \textit{MalGan} straipsnyje \cite{huGeneratingAdversarialMalware2017} naudojami tik \gls{api} vardų požymiai, patenkantys į PE formato programų požymių kategoriją (žr. \ref{sec:literature:features:pe}), tačiau autoriai nurodo, jog gali būti naudojami bet kokie požymiai\footnote{\label{footnote:detector-assumptions}autoriai nagrinėja \enquote{juodos dėžės} atvejį su prielaida, jog detektoriaus naudojami požymiai yra žinomi.}.
+    }
+    \perturbations{}{
+        Semantinės perturbacijos (\ref{sec:literature:perturbations:semantic}) --
+        nereikalingų \gls{api} vardų požymių pridėjimas.
+    }
+\end{describeFramework}
+
+\begin{describeFramework}{N-gram MalGAN}{\cite{zhuNgramMalGANEvading2022}}
+    \introLastPar{
+        Šis \gls{framework} remiasi \refFramework{MalGAN} karkasu ir siekia jį pagerinti.
+    }
+    \purpose{
+        Supaprastinti, pagreitinti ir pagerinti \glsplka{adversarial}. Pašalinti prielaidas\footnoteref{footnote:detector-assumptions} apie detektorių \enquote{juodos dėžės} atvejais.
+    }
+    \surrogate{
+        Surogatinio modelio veikimas ir architektūra tokia pati, kaip ir \refFramework{MalGAN}.
+    }
+    \mainModel{
+        Pagrindinio modelio veikimas ir architektūra labai panašūs į \refFramework{MalGAN}, tačiau norėdami stabilizuoti mokymosi procesą, autoriai siūlo nenaudoti \enquote{triukšmo} vektoriaus. Vietoje to, generatoriaus išvestis ($n$-matis vektorius) modifikuojama nekeičiant pirmų $m$ dimensijų, o kitas $n-m$ pakeičiant nekenksmingų programų požymiais.
+    }
+    \features{}{
+        Baitų lygio požymiai (\ref{sec:literature:features:byte}) -- $n$-gramos.
+    }
+    \perturbations{Autoriai neatliko eksperimentų su perturbuotomis programomis,
+        tačiau pažymi, jog norint gauti sugeneruotus požymių vektorius užtenka pridėti
+        reikiamus baitus programos gale. Tai atitinka
+        \ref{sec:literature:perturbations:byte} apibrėžtą }{
+        baitų lygio perturbaciją \textit{ARBE}, tik šiuo atveju pridedami baitai nebūtų
+        atsitiktiniai, o norimos $n$-gramos.
+    }
+\end{describeFramework}
+
+\begin{describeFramework}{MalFox}{\cite{zhongMalFoxCamouflagedAdversarial2024}}
+    \introLastPar{
+        \textit{\Name} taip pat remiasi \refFramework{MalGAN}, tačiau siekia kurti \gls{ae} realiomis sąlygomis, dėl to atlieka esminius pakeitimus.
+    }
+    \purpose{Generuoti \gls{ae}, kurių neaptiktų komerciniai detektoriai (prieš tai aptarti \glspl{framework} eksperimentams kaip nepriklausomą detektorių naudojo tokius \gls{ml} modelius, kaip \gls{svm}, \gls{knn}, \gls{gbdt} ir kt., bet ne komercinius detektorius). Šio \glsko{framework} detektorius yra \textit{VirusTotal} (viešai prieinama paslauga, agreguojanti virš 70 komercinių kenkėjiškų programų detektorių).}
+    \surrogate{Surogatinis modelis, kaip ir kituose \gls{gan} tipo modelių karkasuose, naudojamas kaip diskriminatorius. Įvestis -- perturbuota programa. Išvestis -- klasifikacija į kenksmingą arba nekenksmingą. Įgyvendinimas -- konvoliucinis neuroninis tinklas (\gls{cnn}).}
+    \mainModel{Standartinis \gls{gan} generatorius, požymių vektorių sujungiantis su \enquote{triukšmo} vektoriumi. Įgyvendinimas -- konvoliucinis neuroninis tinklas (\gls{cnn}).}
+    \features{}{
+        PE formato programų požymiai (\ref{sec:literature:features:pe}) -- \gls{dll}
+        vardai. 
+    }
+    \perturbations{}{
+        Visos kompleksinės perturbacijos (\ref{sec:literature:perturbations:complex}).
+    }
+\end{describeFramework}

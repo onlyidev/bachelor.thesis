@@ -1,0 +1,20 @@
+\subsection{Naudojami kenkėjiškų programų požymiai}\label{sec:literature:features}
+\Gls{adversarial} taikosi į \gls{ml} modeliais paremtus kenkėjiškų programų detektorius. Šie detektoriai yra klasifikatoriai -- pateiktį (programą) klasifikuoja kaip kenkėjišką \angl{malicious} arba nekenkėjišką \angl{benign}. Kadangi programos nėra fiksuoto dydžio, klasifikatoriai remiasi programų požymiais, kurie gaunami atliekant požymių ištraukimą \angl{feature extraction}. Laikoma, jog \enquote{juodos dėžės} atvejais sužinoti, kokius tiksliai požymius vertina kenkėjiškų programų detektorius, yra neįmanoma, tad ERROR\gls{framework} apibrėžimuose, priklausomai nuo jų specifikos ir tikslų, neretai pateikiami jų vertinami programų požymiai. Šiame poskyryje išskiriami ir klasifikuojami mokslinėje literatūroje minimi požymiai.
+
+\subsubsection{\gls{pe} formato programų požymiai}\label{sec:literature:features:pe}
+Išskiriami šie pagrindiniai \gls{pe} formato programų požymiai:
+\begin{itemize}
+    \item \textbf{\gls{dll} vardai (arba \gls{api} vardai \cite{huGeneratingAdversarialMalware2017})} \cite{zhongMalFoxCamouflagedAdversarial2024}. \gls{pe} faile turi būti nurodyti visi naudojami \gls{dll} ir jų \gls{api}. Prieš pradedant mokyti \gls{ml} modelį, atliekama visų turimų programų analizė ir nustatoma visų naudojamų \gls{dll} ar jų \gls{api} aibė $D$. Tarkime $|D| = n$. Tuomet, požymių vektorius programai, naudojančiai $X \subseteq D$ \gls{dll}, bus $n$-matis dvejetainis vektorius, kurio $i$-asis elementas yra $\begin{cases}
+        0, \text{ jei } D_i \not \in X, \\
+        1, \text{ jei } D_i \in X
+    \end{cases}$ čia $D_i$ -- $i$-asis $D$ elementas.
+    \item \textbf{\gls{pe} metaduomenys} \cite{andersonLearningEvadeStatic2018}. Tai visi \gls{pe} formato faile esantys metaduomenys, tokie, kaip sekcijų pavadinimai, sekcijų dydžiai, \textit{ImportTable} ir \textit{ExportTable} metaduomenys ir kt. Formuojant požymių vektorių skaičiuojama metaduomenų \gls{hashfunction}.
+\end{itemize}
+
+\subsubsection{Baitų lygio požymiai}\label{sec:literature:features:byte}
+Baitų lygio požymiai gali būti ištraukiami iš bet kokio formato failų. Mokslinėje literatūroje minimi šie pagrindiniai baitų lygio požymiai:
+\begin{itemize}
+    \item \textbf{Prasmingų žodžių (angl. Strings) kiekis} \cite{andersonLearningEvadeStatic2018}. Prasmingus žodžius suprantame kaip turinčius prasmę žmogui \textit{(angl. human readable)}. Tai gali būti URL, failų keliai \textit{(angl. file paths)} ar registro raktų pavadinimai. Kadangi prasmingų žodžių kiekis tėra vienas skaičius, požymių vektorius dažniausiai formuojamas prijungiant ir kitus požymius.
+    \item \textbf{Baitų/entropijos histograma} \cite{saxeDeepNeuralNetwork2015}. Specifinis metodas, užkoduojantis dažniausiai pasikartojančias baitų ir entropijos poras $n$ dimensijų vektoriumi.
+    \item \textbf{$n$-gramos} \cite{zhuNgramMalGANEvading2022}. Dažniausiai sutinkamos skaitmeniniame natūraliosios kalbos apdorojime (\gls{nlp}). Tai yra $n$ žodžių junginiai, arba, sukompiliuotų programų apdorojimo kontekste, $n$ baitų junginiai. Nustatant požymių vektorių, visos $n$-gramos surikiuojamos pagal pasikartojimą programoje mažėjimo tvarka (\enquote{populiariausios} viršuje). Iš pirmų $m$ reikšmių sudaromas $m$-matis vektorius -- tai ir yra požymių vektorius.
+\end{itemize}

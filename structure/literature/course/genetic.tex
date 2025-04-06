@@ -1,0 +1,56 @@
+\subsection{Genetinių algoritmų tipo modelių \glspl{framework}}\label{sec:literature:genetic}
+
+Genetinai algoritmai (\gls{genetic}) yra viena seniausių mašininio mokymosi
+\gls{ml} apraiškų; jų veikimas paremtas evoliucija
+\cite{castroAIMEDEvolvingMalware2019}. Kenkėjiškų programų obfuskacijai
+\gls{ae} generavimas taikant \gls{genetic} yra tokia seka
+\cite{yusteOptimizationCodeCaves2022}:
+\begin{enumerate}
+    \item Sukuriama pradinė populiacija (perturbacijos metodai pradinei populiacijai
+          priklauso nuo \glsko{framework}).
+    \item Atliekamas tinkamumo \angl{fitness} vertinimas.\label{enum:genetic:fitness}
+    \item Atliekama selekcija -- dažniausiai pasirenkami geriausiai įvertinti
+          populiacijos \gls{ae}, tačiau galimos ir kitos selekcijos strategijos.
+    \item Atliekamas selekcijos atrinktų \gls{ae} kryžminimas (po 2) taip sukuriant naują
+          \gls{ae}, turintį po dalį genų iš abiejų kryžmintų \gls{ae}.
+    \item Tam tikrai daliai \gls{ae} atliekama dalies genų mutacija.
+    \item Vertinama, ar sugeneruoti \gls{ae} atitinka kriterijus (vertina detektorius).
+    \item Jei kriterijai nėra tenkinami, seka kartojama nuo \ref{enum:genetic:fitness}-o
+          žingsnio.
+\end{enumerate}
+
+\begin{describeFramework}{AIMED}{\cite{castroAIMEDEvolvingMalware2019}}
+    \purpose{\gls{ae} generavimo greičio padidinimas ir modelių kompleksiškumo sumažinimas, lyginant su \gls{gan} ir \gls{rl} tipo modelių karkasais.}
+    \surrogate{Surogatinis modelis nenaudojamas. Naudojami \enquote{juodos dėžės} detektoriai yra \textbf{3 komerciniai} (\textit{Kaspersky, ESET, Sophos}) ir vienas \gls{ml} modelis -- \gls{gbdt}.}
+    \mainModel{Klasikinis \gls{genetic} modelis -- veikimas visiškai atitinką bendrą seką. Tinkamumo \angl{fitness} vertinamas remiasi \gls{ae} požymių vektoriaus panašumu į originalios programos požymių vektorių (kuo mažiau panašūs, tuo tinkamumo įvertinimas didesnis).}
+    \features{}{
+        Baitų lygio požymiai (\ref{sec:literature:features:byte}) -- atskiras $n$-gramų
+        atvejis, kai $n=1$.
+    }
+    \perturbations{}{ Baitų lygio
+        perturbacijos\footnote{autoriai rėmėsi perturbacijomis, aprašytomis
+            \cite{andersonLearningEvadeStatic2018}}
+        (\ref{sec:literature:perturbations:byte}). 
+    }
+\end{describeFramework}
+
+\clearpage
+\begin{describeFramework}{GAMMA}{\cite{demetrioFunctionalityPreservingBlackBoxOptimization2021}}
+    \purpose{Efektyvus (neaptikimo šansų didinimas naudojant perturbacijas, paremtas nekenksmingomis programomis) \glsplko{adversarial} kūrimas.}
+    \surrogate{Surogatinis modelis nenaudojamas. \gls{gbdt} ir \textit{MalConv} pasirinkti kaip \enquote{juodos dėžės} detektoriai.}
+    \mainModel{Pagrindinė modelio idėja yra požymių ištraukimas iš nekenksmingų programų ir jų pridėjimas, naudojant tam pritaikytas perturbacijas, į kenksmingas programas kiekvienos populiacijos generavimo metu. Tinkamumo \angl{fitness} ir kriterijų vertinimas atliekamas naudojant detektorių ir pridėtų požymių dydį baitais (norima pridėti kuo mažiau požymių).}
+    \features{}{
+        \begin{itemize}
+            \item \gls{pe} formato programų požymiai (\ref{sec:literature:features:pe}).
+            \item Kodas sekcijose (nestandartinis požymis).
+        \end{itemize}
+    }
+    \perturbations{}{
+        \begin{itemize}
+            \item Visos baitų lygio perturbacijos (\ref{sec:literature:perturbations:byte}),
+                  gebančios pridėti baitus.
+            \item Autoriai pažymi, jog gali būti naudojama ir \gls{dll} / \gls{api} vardų
+                  pridėjimo semantinė perturbacija (\ref{sec:literature:perturbations:semantic}).
+        \end{itemize}
+    }
+\end{describeFramework}

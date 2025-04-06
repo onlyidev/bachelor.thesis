@@ -1,0 +1,69 @@
+\subsection{Skatinamojo mokymosi tipo modelių \glspl{framework}}\label{sec:literature:rl}
+
+Skatinamojo mokymosi (\gls{rl}) modeliai susideda iš agento ir aplinkos.
+Aplinka susideda iš informatyvių požymių ištraukimo metodo (\textit{angl.
+    feature extraction}) ir kenkėjiškų programų detektoriaus. Šiuo atveju aplinkos
+būsenų erdvė $S$ yra požymių vektorių erdvė. Agentas -- tai algoritmas ar
+neuroninis tinklas, kurio tikslas yra surasti optimalią strategiją
+\gls{policy}. Šiuo atveju strategijos veiksmų erdvė $A$ susideda iš
+perturbacijų (žr. \ref{sec:literature:perturbations})
+\cite{fangEvadingMalwareEngines2019}. Bendras \gls{rl} modelių mokymosi etapas
+yra tokia seka \cite{fangEvadingMalwareEngines2019,
+    zhongReinforcementLearningBased2022}:
+\begin{enumerate}
+    \item Agentas, naudodamas dabartinę aplinkos būseną ir praeito veiksmo atlygį
+          \angl{reward}, parenka sekantį veiksmą iš galimų veiksmų aibės ir taiko
+          mokymosi algoritmą (algoritmas priklauso nuo agento įgyvendinimo).
+    \item Atliekamas veiksmas -- perturbuojama programa arba požymių vektorius (priklauso
+          nuo \glsko{framework}).
+    \item Gaunami aplinkos kitimo įverčiai -- nauja būsena ir atlygis, skaičiuojamas
+          pagal detektoriaus klasifikacijos rezultatą.
+    \item Seka kartojama tol, kol agentas nelaiko strategijos optimalia arba nustatytą
+          kiekį kartų.
+\end{enumerate}
+
+\begin{describeFramework}{DQEAF}{\cite{fangEvadingMalwareEngines2019}}
+    \introLastPar{
+        Šis \gls{framework} taiko gilųjį skatinamąjį mokymąsi, kai agentas implementuojamas kaip gilusis neuroninis tinklas.
+    }
+    \purpose{Parodyti, jog \gls{ml} kenkėjiškų programų detektoriai, ypač modeliai, išmokyti prižiūrimu mokymusi, yra pažeidžiami \glsplkam{adversarial}.
+    }
+    \surrogate{\gls{rl} karkasuose nenaudojami surogatiniai modeliai. Kaip \enquote{juodos dėžės} detektorius pasirinktas \gls{gbdt} modelis.}
+    \mainModel{Agentas implementuotas kaip gilusis $Q$-tinklas (\gls{cnn} praplėtimas, kai tinklas naudojamas kaip \glsko{qfunction} aproksimacija). Taip pat taikomas prioritetizuotas patirčių pakartojimo metodas \angl{prioritized experience replay}, kuomet agentas mokomas tik su aukštą atlygį gavusiais perėjimais ($S \times A$).}
+    \features{Požymių vektorius taip pat apibrėžia visų būsenų erdvę $S$. Šiuo atveju $S = \mathbb{R}^{513}$.}{
+        Baitų lygio požymiai (\ref{sec:literature:features:byte}) -- baitų/entropijos
+        histograma. 
+    }
+
+    \perturbations{Perturbacijos apibrėžia visų galimų agento veiksmų
+        erdvę $A$. Šiuo atveju $A = \set{0,1}^4$.}{
+        Baitų lygio perturbacijos (\ref{sec:literature:perturbations:byte}):
+        \begin{itemize}
+            \item \textit{ARBE}
+            \item \textit{ARI}
+            \item \textit{ARS}
+            \item \textit{RS}
+        \end{itemize}
+    }
+\end{describeFramework}
+
+\begin{describeFramework}{MalInfo}{\cite{zhongReinforcementLearningBased2022}}
+    \introLastPar{
+        \textit{\Name} remiasi \refFramework{MalFox}.
+    }
+    \purpose{Surasti optimalią obfuskacijos strategiją konkrečiai programai, pagal kurią sukurtas \gls{ae} nebūtų aptiktas komercinių kenkėjiškų programų detektorių.
+    }
+    \surrogate{\gls{rl} surogatinis modelis nenaudojamas. \enquote{Juodos dėžės} detektoriumi pasirinkti komerciniai detektoriai (\textit{VirusTotal}).
+    }
+    \mainModel{Agentas implementuotas kaip klasikiniai \gls{ml} algoritmai (konkrečiai dinaminis programavimas ir skirtumų laike \angl{temporal difference} algoritmas).
+    }
+    \features{Agentas nėra neuroninis tinklas ir požymių iš programos netraukia. Agentas mokosi tik iš perėjimų, o būsenų erdvė $S$ yra originali programa ir perturbuoti jos variantai. Teoriškai perturbuotų programos variantų galėtų būti be galo daug, tuomet $S = A^\infty, |S| = \aleph_0$, tačiau autoriai nurodo, jog daugiau nei 3 sluoksniai kompleksinių perturbacijų reikšmingai paveikia programos veikimo laiką, o tai gali \enquote{sukelti įtarimų} komerciniams detektoriams. Todėl pasirinkta $S = A^3$.
+    }{}
+    \perturbations{$A = \set{0,1,2,3}$}{
+        \begin{itemize}
+            \item \textit{Null} perturbacija -- naudinga tik formaliam pilnumui (atitinka nulinį $A$ veiksmą).
+            \item Visos kompleksinės perturbacijos (\ref{sec:literature:perturbations:complex}),
+                  t.~y. tokios pačios, kaip ir \refFramework{MalFox} \glsko{framework}. 
+        \end{itemize}
+    }
+\end{describeFramework}

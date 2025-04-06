@@ -5,5 +5,8 @@
     ],
     "cSpell.enabledFileTypes": {
         "latex": true
-    }
+    },
+    "[latex]": {
+        "files.autoSave": "off",
+    },
 }

@@ -1,0 +1,33 @@
+\newenvironment{describeFramework}[2]{
+    \newcommand{\purpose}[1]{\gdef\Purpose{##1}}
+    \newcommand{\surrogate}[1]{\gdef\Surrogate{##1}}
+    \newcommand{\mainModel}[1]{\gdef\MainModel{##1}}
+    \newcommand{\features}[2]{\gdef\PreFeatures{##1} \gdef\Features{##2}}
+    \newcommand{\perturbations}[2]{\gdef\PrePerturbations{##1} \gdef\Perturbations{##2}}
+    \newcommand{\introLastPar}[1]{\gdef\IntroLastPar{##1}}
+
+    \def\Purpose{}
+    \def\Surrogate{}
+    \def\MainModel{}
+    \def\IntroLastPar{}
+    \def\PreFeatures{}
+    \def\Features{\item[]}
+    \def\PrePerturbations{}
+    \def\Perturbations{\item[]}
+    \def\Name{#1}
+    \def\Citation{#2}
+    \subsubsection{\textit{\Name}}\label{sec:literature:framework:\Name}
+}{
+    \IntroLastPar{}\textit{\Name} \glsko{framework} \Citation{} tikslas ir apibrėžimas pateikiami \ref{tab:framework:\Name}-oje lentelėje.
+    \begin{longtable}{p{0.15\textwidth - 0.675cm}|p{0.85\textwidth}}
+        \caption{\textit{\Name} \gls{framework}}\label{tab:framework:\Name} \\
+        \textbf{Tikslas}              & \Purpose{}                               \\ \toprule
+        \textbf{\Gls{surrogateModel}} & \Surrogate{}                             \\ \midrule
+        \textbf{\gls{ml} modelis}     & \MainModel{}                             \\ \midrule
+        \textbf{Požymiai}             & \PreFeatures{}\Features{}                \\ \midrule
+        \textbf{Perturbacijos}        & \PrePerturbations{}\Perturbations{}      \\ \bottomrule
+    \end{longtable}
+    \noindent
+}
+
+\newcommand{\refFramework}[1]{\textit{#1} (\ref{sec:literature:framework:#1})}
