@@ -32,14 +32,14 @@
 \RequirePackage{fontspec} % Šrifto pasirinkimui
 % Teksto šriftas bus Calibri.
 \setmainfont[
-    Path=fonts/Calibri/,
+    Path=fonts/Palemonas3.2.05/,
     Ligatures=TeX,
     Extension=.ttf,
     UprightFont=*-nm,
     BoldFont=*-bd,
     ItalicFont=*-it,
     BoldItalicFont=*-bi,
-]{Calibri}
+]{Palem3.2.05}
 
 \RequirePackage{setspace} % Intervalas tarp eilučių
 \RequirePackage[
