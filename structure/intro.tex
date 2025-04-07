@@ -1,20 +1,18 @@
 \sectionnonum{Įvadas}
 
-Pastaraisiais metais kenkėjiškas kodas ir programos kuriamos itin sparčiai (\sim450000 kenkėjiškų programų per dieną \href{https://www.av-test.org/en/statistics/malware/}{2024 m. AV-TEST}\footnote{https://www.av-test.org/en/statistics/malware} duomenimis). Kenkėjiško kodo aptikimo programos, kurios tradiciškai remiasi programų \glsplkuo{signature}, nespėja atnaujinti pėdsakų duomenų bazių pakankamai greitai. Dėl to \gls{di}, tiksliau mašininio mokymosi (\gls{ml}), naudojimas kenkėjiškų programų ar kenkėjiško kodo aptikimo srityje tapo itin populiarus \cite{demetrioAdversarialEXEmplesSurvey2021}. Tačiau \gls{ml} modeliai, nors ir geba aptikti kenkėjiškas programas iš naujų, dar nematytų, duomenų, yra pažeidžiami \glsplkam{adversarial} \cite{castroAIMEDEvolvingMalware2019,huGeneratingAdversarialMalware2017,rosenbergGenericBlackBoxEndEnd2018,zhongReinforcementLearningBased2022}. Šių atakų principas yra \gls{ml} modelio --~klasifikatoriaus~-- \glsko{decisionBoundary} radimas -- žinant šią ribą pakanka pakeisti kenkėjiškos programos veikimą taip, kad \gls{ml} modelis priimtų sprendimą klasifikuoti ją kaip nekenksmingą \cite{demetrioAdversarialEXEmplesSurvey2021}. Žinoma, rasti šią ribą nėra trivialus uždavinys. Mokslinėje literatūroje išskiriami 3 ribos paieškos atvejai \cite{fangEvadingMalwareEngines2019}:
-\begin{enumerate}
-    \item \textbf{Baltos dėžės} atvejis: kenkėjiško kodo kūrėjas turi visą informaciją apie \gls{ml} modelį, t.~y. modelio architektūrą, svorius, hiperparametrus.
-    \item \textbf{Juodos dėžės su pasitikėjimo įverčiu} atvejis: kenkėjiško kodo kūrėjas gali tik testuoti modelį -- t.~y. pateikti programą ir gauti atsakymą. Atsakymo forma -- klasifikacija ir tikimybė, kad klasifikacija yra teisinga (pasitikėjimo įvertis).
-    \item \textbf{Juodos dėžės} atvejis: kenkėjiško kodo kūrėjas gali tik testuoti modelį. Atsakymo forma yra tik klasifikacija.
-\end{enumerate}
-Akivaizdu, jog \enquote{juodos dėžės} atvejis yra sudėtingiausias, bet ir labiausiai atitinka realias sąlygas \cite{andersonLearningEvadeStatic2018}. Todėl šiame darbe nagrinėjami modeliai, gebantys generuoti varžymosi principais pagrįstų atakų obfuskuotus kenkėjiško kodo pavyzdžius (\gls{ae}) \enquote{juodos dėžės} atvejams.
+Pastaraisiais metais kenkėjiškas kodas ir programos kuriamos itin sparčiai (\sim450000 kenkėjiškų programų per dieną \href{https://www.av-test.org/en/statistics/malware/}{2024 m. AV-TEST}\footnote{https://www.av-test.org/en/statistics/malware} duomenimis). Kenkėjiško kodo aptikimo programos, kurios tradiciškai remiasi programų \glsplkuo{signature}, nespėja atnaujinti pėdsakų duomenų bazių pakankamai greitai. Dėl to \gls{di}, tiksliau mašininio mokymosi (\gls{ml}), naudojimas kenkėjiškų programų ar kenkėjiško kodo aptikimo srityje tapo itin populiarus \cite{demetrioAdversarialEXEmplesSurvey2021}. Tačiau \gls{ml} modeliai, nors ir geba aptikti kenkėjiškas programas iš naujų, dar nematytų, duomenų, yra pažeidžiami \glsplkam{adversarial} \cite{castroAIMEDEvolvingMalware2019,huGeneratingAdversarialMalware2017,rosenbergGenericBlackBoxEndEnd2018,zhongReinforcementLearningBased2022}. Šių atakų principas yra \gls{ml} modelio --~klasifikatoriaus~-- \glsko{decisionBoundary} radimas -- žinant šią ribą pakanka pakeisti kenkėjiškos programos veikimą taip, kad \gls{ml} modelis priimtų sprendimą klasifikuoti ją kaip nekenksmingą \cite{demetrioAdversarialEXEmplesSurvey2021}. Nustatyta, jog šią ribą galima rasti tiek žinant klasifikatoriaus parametrus, tiek jų nežinant ir net turint labai ribotą prieigą prie klasifikatoriaus rezultatų (pvz., klasifikacijos rezultatą be tikimybių -- tokios sąlygos vadinamos \enquote{juodos dėžės} atvejai) \cite{fangEvadingMalwareEngines2019}.
+
+Vis tik \glspl{adversarial} nėra neįveikiamos. Nuolat kuriami nauji jų aptikimo metodai, tokie kaip \gls{adverasrialRetraining}, gradientų slėpimas ir kt. Kiekvienas metodas turi savų stiprybių ir silpnybių bei dažniausiai remiasi viena iš specifinio \gls{ml} modelio įgyvendinimo savybių, kitaip tariant, nėra vieno geriausio, tinkamiausio ar teoriškai teisingo \glsplko{adversarial} aptikimo metodo. 
+Tiksliau, nėra pačių \gls{ae} konstravimo teorinio modelio, dėl šio proceso kompleksiškumo, tad jų aptikimo strategijos teorinis modelis taip pat nėra žinomas \cite{chakrabortySurveyAdversarialAttacks2021}. Šiame darbe siekiama generalizuoti \gls{ae} aptikimą apjungiant panašiame kenkėjiškų programų aptikimo kontekste naudojamą \LIME \cite{ribeiroWhyShouldTrust2016} metodą ir kitas mokslinėje literatūroje aprašytas technikas.
 
 \vspace{10pt}
-\textbf{Tikslas} -- nustatyti labiausiai tinkantį karkasą varžymosi principais pagrįstoms atakoms \enquote{juodos dėžės} atvejais.
+\textbf{Tikslas} -- pritaikyti \LIME metodą sėkmingų varžymosi principais grįstų atakų aptikimui ir paaiškinimui vertinant bet kokius požymius.
 
 \vspace{10pt}
 \textbf{Uždaviniai}:
 \begin{enumerate}
-    \item Apžvelgti kenkėjiško kodo obfuskacijos metodus.
-    \item Nustatyti kriterijus varžymosi principais grįstų atakų karkasams ir juos įvertinti.
-    \item Atlikti eksperimentinį tyrimą su vienu iš įvertintų karkasų ir patikrinti vertinimo rezultatus.
+    \item Apžvelgti kenkėjiško kodo obfuskacijos metodus bei apsisaugojimo nuo jų strategijas.
+    \item Pritaikyti \glsplko{adversarial} aptikimą dvejetainius požymių vektorius naudojantiems modeliams taikant dimensijų mažinimo metodus.
+    \item Sukurti klasifikavimo proceso praplėtimą į jį įtraukiant \glspl{adversarial} aptikimą.
+    \item Ištirti praplėsto klasifikavimo proceso tikslumą \angl{accuracy}.
 \end{enumerate}
