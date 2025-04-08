@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.0](https://github.com/onlyidev/bachelor.thesis/compare/v0.3.0...v0.4.0) (2025-04-07)
+
+
+### Features
+
+* **literature:** :fire: Add course work literature sections ([7024c37](https://github.com/onlyidev/bachelor.thesis/commit/7024c37400ee13645eceb65f3f55d756a2aa8669))
+* **look:** Set font to Palemonas ([8f0cb15](https://github.com/onlyidev/bachelor.thesis/commit/8f0cb15f2fcdd78576a2cca9e9c2037722037255))
+* **sections:** :fire: Add 2nd para to intro. Change goals ([3f8d75d](https://github.com/onlyidev/bachelor.thesis/commit/3f8d75db6150bdcae0b6b64fb9929e667a41b463))
+
 ## [0.3.0](https://github.com/onlyidev/bachelor.thesis/compare/v0.2.0...v0.3.0) (2025-04-05)
 
 
