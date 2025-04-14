@@ -1,5 +1,30 @@
 # Main Paper
 
+## Literature Kanban
+```mermaid
+kanban
+todo["Todo"]
+ Lime
+ IDS
+ PCA/MCA
+
+review["To review"]
+done["Done"]
+```
+
+## Experiments Kanban
+```mermaid
+kanban
+todo["Todo"]
+ Normal
+ IDS-only
+ Original
+ Methodology
+
+review["To review"]
+done["Done"]
+```
+
 ## Plan
 
 - [x] titulinis lapas
