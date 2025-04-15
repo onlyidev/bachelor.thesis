@@ -4,12 +4,12 @@
 ```mermaid
 kanban
 todo["Todo"]
- strats["Defense strategies"]
  Lime
  IDS
  PCA/MCA
 
 review["To review"]
+ strats["Defense strategies"]
 done["Done"]
 ```
 
