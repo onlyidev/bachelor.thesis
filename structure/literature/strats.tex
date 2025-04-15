@@ -1,0 +1,50 @@
+\subsection{\gls{ae} aptikimo strategijos}\label{sec:literature:defense}
+
+\def\strat{Varžymosi principais pagrįstas pertreniravimas}
+\subsubsection{\strat}\label{sec:literature:defense:retraining}
+
+\strat~\angl{adversarial retraining} -- tai papildomas \gls{ml} modelio treniravimo etapas. Tarkime pradinis ištreniruotas \gls{ml} modelis yra $M_1$. Tuomet \lowercase{\strat} yra \gls{ae} generavimas atakuojant $M_1$ ir šio modelio papildomas treniravimas su sugeneruotais \gls{ae}. Po treniravimo gauname $M_2 \; (M_1 \xrightarrow{AE} M_2)$, kuris bus atsparesnis \glsplkam{adversarial}. Ši strategija nėra atspari \glsplkam{blackBoxAttack} \cite{chakrabortySurveyAdversarialAttacks2021}.
+
+
+
+\def\strat{Gradientų slėpimas}
+\subsubsection{\strat}
+
+\strat~\angl{gradient hiding} -- tai metodas, kai pasirenkama klasifikatoriaus architektūra, kurioje nefigūruoja gradientai, pavyzdžiui, nediferencijuojami modeliai, tokie kaip atsitiktinis miškas \angl{random forest}. Dėl \gls{ae} perkeliamumo \skyrius{sec:literature:transfer}{skyriuje} ši strategija yra neveiksminga prieš \glsplka{blackBoxAttack} \cite{chakrabortySurveyAdversarialAttacks2021}.
+
+
+
+\def\strat{Kategorijų švelninimas}
+\subsubsection{\strat}
+
+\strat~\angl{label smoothing} -- metodas, leidžiantis geriau klasifikuoti nežinomus duomenis ir taip apsisaugoti nuo \glsplko{adversarial}. \strat~reiškia tiksliai apibrėžtų kategorijų \angl{hard labels} pavertimą tikimybiniais vektoriais \angl{soft labels}. Tuomet \gls{ml} modelio išvestis (taip pat tikimybinis vektorius) gali būti palyginama su kategorijų vektoriais taikant norimas euristikas, pavyzdžiui, kosinusų panašumą \angl{cosine similarity}. Dėl \gls{ae} perkeliamumo \skyrius{sec:literature:transfer}{skyriuje} ši strategija neveiksminga prieš \glsplka{blackBoxAttack} \cite{chakrabortySurveyAdversarialAttacks2021}.
+
+
+
+\def\strat{Perkeliamumo blokavimas}
+\subsubsection{\strat}
+
+\strat~\angl{transferability blocking} -- tai varžymosi principais pagrįsto pertreniravimo \skyrius{sec:literature:defense:retraining}{} praplėtimas, įtraukiant naują (\textit{NULL}) kategoriją į galimas klasifikatoriaus išvestis. Ši strategija praplečia klasifikatoriaus treniravimą į šiuos etapus:
+\begin{enumerate}
+    \item Įprastas klasifikatoriaus treniravimas.
+    \item \textit{NULL} tikimybių skaičiavimas -- suprantama kaip \glsko{adversarial} tikimybė. Tikimybių skaičiavimas pateiktas \ref{eq:null}-oje lygtyje.
+    \item Varžymosi principais pagrįstas pertreniravimas, įtraukiant tiek originalias įvestis, tiek perturbuotas ($\delta X$).
+\end{enumerate}
+
+Ši strategija sprendžia pagrindinį daugelio kitų strategijų trūkumą -- \gls{ae} perkeliamumą \skyrius{sec:literature:transfer}{}, todėl yra pakankamai efektyvi \cite{chakrabortySurveyAdversarialAttacks2021}.
+
+\begin{equation}\label{eq:null}
+    \begin{split}
+        &p_{NULL} = f\left(\frac{\| \delta X \|_0}{\|X\|}\right),\\
+        \text{čia}\; \| \delta
+        &X \|_0 \sim U[1,\; N_{max}], \; N_{max} = \min n \ni f\left(\frac{n}{\|X\|}\right)
+        = 1
+    \end{split}
+\end{equation}
+
+
+
+\def\strat{Bazės keitimas, transformacijos}
+\subsubsection{\strat}
+
+\strat~\angl{change of basis, transformations} -- tai strategija transformuojanti duomenis juos projektuojant kitoje koordinačių sistemoje. Pavyzdžiui, \gls{pca} metodas keičia duomenų koordinačių sistemos bazę taip, jog pirma komponentė turėtų didžiausią \glska{inertia}. Tam tikrais atvejais taikant šią strategiją gali būti prarandama informacija (jei keičiama į mažesnės dimensijos bazę), pavyzdžiui, naudojant \textit{JPEG lossy compression} algoritmą nuotraukų transformacijai. Ši strategija padeda efektyviai apsisaugoti nuo visų tipų \glsplko{adversarial} \cite{chakrabortySurveyAdversarialAttacks2021}.

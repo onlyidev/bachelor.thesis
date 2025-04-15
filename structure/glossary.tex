@@ -51,7 +51,7 @@
 
 \newglossaryentry{adversarial}{
     name={Varžymosi principais pagrįstos atakos \angl{Adversarial Attacks}},
-    description={Tai atakos, pritaikytos \enquote{apgauti} \gls{ml} klasifikatorius},
+    description={Tai atakos, pritaikytos „apgauti“ \gls{ml} klasifikatorius},
     text=varžymosi principais pagrįsta ataka,
     ko=varžymosi principais pagrįstos atakos,
     kam=varžymosi principais pagrįstai atakai,
@@ -119,7 +119,7 @@
 
 \newglossaryentry{policy}{
     name={Strategija \angl{Policy}},
-    description={Tai funkcija $\pi : S \times A \rightarrow \set{0,1}$, čia $S$ -- galimų būsenų erdvė \angl{State Space}, $A$ -- galimų veiksmų erdvė \angl{Action Space}. Šią funkciją \gls{rl} modelis \enquote{išmoksta} mokymosi metu},
+    description={Tai funkcija $\pi : S \times A \rightarrow \set{0,1}$, čia $S$ -- galimų būsenų erdvė \angl{State Space}, $A$ -- galimų veiksmų erdvė \angl{Action Space}. Šią funkciją \gls{rl} modelis „išmoksta“ mokymosi metu},
     text={strategija \angl{policy}}
     ko=strategijos,
     kam=strategijai,
@@ -152,20 +152,54 @@
 }
 
 \newglossaryentry{adverasrialRetraining}{
-name=Varžymosi principais grįstas treniravimas,
-description={\gls{ml} modelio treniravimas naudojant \gls{ae} kaip mokymosi duomenis. Viena iš apsisaugojimo nuo \glsplko{adversarial} strategijų},
-text=varžymosi principais grįstas treniravimas,
-ko=varžymosi principais grįsto treniravimo,
-kam=varžymosi principais grįstam treniravimui,
-ka=varžymosi principais grįstą treniravimą,
-kuo=varžymosi principais grįstu treniravimu,
-kur=varžymosi principais grįstame treniravime,
-plural=varžymosi principais grįsti treniravimai,
-plko=varžymosi principais grįstų treniravimų,
-plkam=varžymosi principais grįstiems treniravimams,
-plka=varžymosi principais grįstus treniravimus,
-plkuo=varžymosi principais grįstais treniravimais,
-plkur=varžymosi principais grįstuose treniravimuose,
+    name=Varžymosi principais grįstas treniravimas,
+    description={\gls{ml} modelio treniravimas naudojant \gls{ae} kaip mokymosi duomenis. Viena iš apsisaugojimo nuo \glsplko{adversarial} strategijų},
+    text=varžymosi principais grįstas treniravimas,
+    ko=varžymosi principais grįsto treniravimo,
+    kam=varžymosi principais grįstam treniravimui,
+    ka=varžymosi principais grįstą treniravimą,
+    kuo=varžymosi principais grįstu treniravimu,
+    kur=varžymosi principais grįstame treniravime,
+    plural=varžymosi principais grįsti treniravimai,
+    plko=varžymosi principais grįstų treniravimų,
+    plkam=varžymosi principais grįstiems treniravimams,
+    plka=varžymosi principais grįstus treniravimus,
+    plkuo=varžymosi principais grįstais treniravimais,
+    plkur=varžymosi principais grįstuose treniravimuose,
+}
+
+\newglossaryentry{blackBoxAttack}{
+    name={„Juodos~dėžės“ ataka},
+    description={\glsko{adversarial} atvejis, kai atakuojamo \gls{ml} modelio parametrai bei klasifikacijos tikimybiniai įverčiai nėra žinomi.},
+    text={„juodos~dėžės“ ataka},
+    ko={„juodos~dėžės“ atakos},
+    kam={„juodos~dėžės“ atakai},
+    ka={„juodos~dėžės“ ataką},
+    kuo={„juodos~dėžės“ ataka},
+    kur={„juodos~dėžės“ atakoje},
+    plural={„juodos~dėžės“ atakos},
+    plko={„juodos~dėžės“ atakų},
+    plkam={„juodos~dėžės“ atakoms},
+    plka={„juodos~dėžės“ atakas},
+    plkuo={„juodos~dėžės“ atakomis},
+    plkur={„juodos~dėžės“ atakose},
+}
+
+\newglossaryentry{inertia}{
+    name={Inercija \angl{inertia}},
+    description={\TODO},
+    text={\TODO},
+    ko={\TODO},
+    kam={\TODO},
+    ka={inerciją},
+    kuo={\TODO},
+    kur={\TODO},
+    plural={\TODO},
+    plko={\TODO},
+    plkam={\TODO},
+    plka={\TODO},
+    plkuo={\TODO},
+    plkur={\TODO},
 }
 
 % Acronyms
@@ -183,3 +217,5 @@ plkur=varžymosi principais grįstuose treniravimuose,
 \newacronym{cnn}{CNN}{\Angl{convolutional neural network}}
 \newacronym{rl}{RL}{Skatinamasis mokymasis \angl{reinforcement learning}}
 \newacronym{genetic}{GA}{Genetiniais algoritmais pagrįstas \gls{ml} modelis \angl{genetic algorithm}}
+
+\newacronym{pca}{PCA}{\Angl{Principal Component Analysis}}
