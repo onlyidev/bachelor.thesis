@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.5.0](https://github.com/onlyidev/bachelor.thesis/compare/v0.4.0...v0.5.0) (2025-04-15)
+
+
+### Features
+
+* **literature:** Added main defense strategies from survey 2021 ([e9a0041](https://github.com/onlyidev/bachelor.thesis/commit/e9a004165cd12527aac78965d1b1759f63d51594))
+
+
+### Bug Fixes
+
+* **readme:** Added kanbans for tracking progress ([170a60a](https://github.com/onlyidev/bachelor.thesis/commit/170a60a7625f8d3acd3d05e83643fe4df982de65))
+
 ## [0.4.0](https://github.com/onlyidev/bachelor.thesis/compare/v0.3.0...v0.4.0) (2025-04-07)
 
 
