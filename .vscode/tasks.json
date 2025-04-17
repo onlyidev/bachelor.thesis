@@ -15,8 +15,15 @@
 			"label": "Make Clean",
 			"command": "make clean",
 			"group": {
-				"kind": "none",
+				"kind": "none"
 			}
+		},
+		{
+			"type": "shell",
+			"label": "Diagrams",
+			"command": "${workspaceFolder}/diagrams/convert.sh",
+			"isBackground": true,
+			"problemMatcher": []
 		}
 	]
 }
