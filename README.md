@@ -4,9 +4,8 @@
 ```mermaid
 kanban
 todo["Todo"]
- PCA/MCA
-
 review["To review"]
+ PCA/MCA
  strats["Defense strategies"]
  Lime
  IDS

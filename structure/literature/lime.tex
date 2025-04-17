@@ -9,30 +9,35 @@ Svarbus \LIME parametras yra branduolio plotis \angl{kernel width} \omega. \LIME
 
 \subsubsection{\Glsplko{adversarial} aptikimas \gls{ids} naudojant \LIME}
 
-\glsxtrfull{ids} -- tai sistema, veikianti uždarame tinkle ir nuolat analizuojanti tinklo srautą. Vienas iš \gls{ids} įgyvendinimo būdų yra pasitelkti \gls{ml} modelius, tad šios sistemos taip pat yra pažeidžiamos \glsplkam{adversarial}. Šiame kontekste Tcydenova ir kt. pritaikė \LIME kaip \gls{ae} aptikimo strategiją. Jų siūlomas metodas \zr{fig:ids} \gls{ae} aptikimui susideda iš dviejų pagrindinių dalių:
-\begin{enumerate}
-    \item Mokymo fazė.
-    \begin{itemize}
-        \item Mokomas \gls{ml} modelis tinklo srauto klasifikavimui.
-        \item Kiekvienam nekenkėjiškų mokymo duomenų pavyzdžiui pritaikomas \LIME metodas -- gaunama paaiškinimų aibė $E$, kur kiekvienas elementas yra $n$-matis vektorius, turintis $n$ svarbiausių \textbf{interpretuojamų paaiškinimų}.
-        \item $E$ laikoma normalių požymių aibe.
-    \end{itemize}
-    \item Aptikimo fazė.
-    \begin{itemize}
-        \item Išmokytas \gls{ml} modelis klasifikuoja tinklo srautą.
-        \item Jei \gls{ml} modelis nustato, jog įvestis yra kenksminga -- ji tokia ir laikoma.
-        \item Jei \gls{ml} modelis nustato, jog įvestis nėra kenksminga -- taikomas \LIME metodas ir gaunamas klasifikavimo paaiškinimas.
-        \item Jei klasifikavimo paaiškinime figūruoja bent vienas požymis, nepriklausantis $E$ aibei -- laikoma, jog įvestis yra kenksminga.
-        \item Jei visi klasifikavimo paaiškinime figūruojantys požymiai priklauso aibei $E$ -- laikoma, jog įvestis nekenksminga.
-    \end{itemize}
-\end{enumerate}
+\glsxtrfull{ids} -- tai sistema, veikianti uždarame tinkle ir nuolat analizuojanti tinklo srautą. Vienas iš \gls{ids} įgyvendinimo būdų yra pasitelkti \gls{ml} modelius, tad šios sistemos taip pat yra pažeidžiamos \glsplkam{adversarial}. Šiame kontekste Tcydenova ir kt. pritaikė \LIME kaip \gls{ae} aptikimo strategiją. Jų siūlomas metodas \zr{fig:ids} \gls{ae} aptikimui susideda iš dviejų pagrindinių dalių \cite{tcydenovaDetectionAdversarialAttacks2021}:
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.35\textwidth]{images/ids.png}
-    \caption{\LIME pritaikymas \gls{ae} aptikimui \gls{ids} (adaptuota iš \cite{tcydenovaDetectionAdversarialAttacks2021})}
-    \label{fig:ids}
-\end{figure}
+\noindent
+\begin{minipage}[l]{0.45\textwidth}
+    \begin{enumerate}[leftmargin=*]
+        \item Mokymo fazė.
+        \begin{itemize}[leftmargin=*]
+            \item Mokomas \gls{ml} modelis tinklo srauto klasifikavimui.
+            \item Kiekvienam nekenkėjiškų mokymo duomenų pavyzdžiui pritaikomas \LIME metodas -- gaunama paaiškinimų aibė $E$, kur kiekvienas elementas yra $n$-matis vektorius, turintis $n$ svarbiausių \textbf{interpretuojamų paaiškinimų}.
+            \item $E$ laikoma normalių požymių aibe.
+        \end{itemize}
+        \item Aptikimo fazė.
+        \begin{itemize}[leftmargin=*]
+            \item Išmokytas \gls{ml} modelis klasifikuoja tinklo srautą.
+            \item Jei \gls{ml} modelis nustato, jog įvestis yra kenksminga -- ji tokia ir laikoma.
+            \item Jei \gls{ml} modelis nustato, jog įvestis nėra kenksminga -- taikomas \LIME metodas ir gaunamas klasifikavimo paaiškinimas.
+            \item Jei klasifikavimo paaiškinime figūruoja bent vienas požymis, nepriklausantis $E$ aibei -- laikoma, jog įvestis yra kenksminga.
+            \item Jei visi klasifikavimo paaiškinime figūruojantys požymiai priklauso aibei $E$ -- laikoma, jog įvestis nekenksminga.
+        \end{itemize}
+    \end{enumerate}
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}{0.58\textwidth}
+        \includegraphics[width=\textwidth]{images/ids.png}
+        \captionsetup{justification=centering}
+        \captionof{figure}{\LIME pritaikymas \gls{ae} aptikimui \gls{ids} (adaptuota iš \cite{tcydenovaDetectionAdversarialAttacks2021})}
+        \label{fig:ids}
+\end{minipage}
 
+\break
 
-% Explain the IDS + LIME to detect obfuscations. Do not forget to categorize
+\LIME metodo taikymas \glsplko{adversarial} aptikimui yra artimas \textbf{perkeliamumo blokavimo} \skyrius{sec:literature:defense:blocking}{} strategijai, tačiau šiuo atveju \LIME veikia kaip atskiras nuo pagrindinio klasifikatoriaus komponentas, tad pagrindinis \gls{ml} modelis lieka pažeidžiamas \glsplkam{adversarial}.
