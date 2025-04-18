@@ -1,0 +1,18 @@
+graph TD
+    subgraph Mokymo fazė
+        A[<i class='fa fa-database'></i> Nekenkėjiški duomenys] -- Mokymas --> C["<i class='fa fa-lightbulb'></i> XAI (LIME) metodas"];
+        C --> D["<i style='margin-right: 1rem' class='fa fa-list'></i> Požymių statistikos $$\;S$$"];
+    end
+
+    subgraph Aptikimo fazė
+        E[<i class='fa fa-network-wired'></i> Klasifikuojami duomenys] -- Požymių ištraukimas --> F{<i class='fa fa-search'></i> Originalus klasifikatorius};
+        F -- Nekenkėjiška --> MCA[" <i class='fa fa-rotate'></i> MCA transformacija"] 
+        MCA --> G["<i class='fa fa-lightbulb'></i> XAI (LIME) metodas"];
+        G --> H[<i style='margin-right: 1rem;' class='fa fa-file-alt'></i> Interpretuojamas paaiškinimas $$\;p$$];
+        H -- "$$\forall i : p_i \le 3\cdot S_{\sigma_i}$$" --> HN[<i class='fa fa-check-circle'></i> Nekenkėjiška];
+        F -- Kenkėjiška --> L[<i class='fa fa-user-secret'></i> Kenkėjiška];
+        H -- "$$\exists i: p_i > 3\cdot S_{\sigma_i}$$" --> L;
+    end
+
+    C -.-> G; 
+    D -.-> H; 

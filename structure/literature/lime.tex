@@ -1,4 +1,4 @@
-\subsection{\LIME metodas}
+\subsection{\LIME metodas}\label{sec:literature:lime}
 
 \LIME \angl{Local Interpretable Model-agnostic Explanations} -- tai lokalūs, interpretuojami \gls{ml} modelių išvesčių paaiškinimai. \gls{ml} modeliai dažnai turi būti sudėtingi (dėl to ir sunkiai, ar visiškai neinterpretuojami), nes jie aproksimuoja sudėtingus skirstinius visoje (globalioje) srityje. \LIME metodo idėja yra aproksimuoti skirstinį taip pat, kaip \gls{ml} modelis žymiai mažesnėje --~\textbf{lokalioje}~-- srityje \angl{locally faithful}. Tai leidžia \LIME naudojamam aproksimacijos modeliui būti ženkliai paprastesniam, daugeliu atvejų -- tiesiniam (pvz., tiesinė regresija).
 \LIME veikimo principas yra vieno pavyzdžio (įvesties $x_0$) perturbavimas taip sukuriant lokalių $x_0$ artimų įvesčių aibę $\hat{X}$. Kiekvienas $\hat{X}$ elementas pateikiamas originalaus modelio ($M$) klasifikacijai ir taip gaunama aibė $\hat{Y}$ ($\hat{X} \xrightarrow{M} \hat{Y}$). Abi aibės naudojamos surogatinio (dažniausiai tiesinio) modelio $\hat{M}$ mokymui. Tuomet \textbf{interpretuojamas paaiškinimas} yra surikiuotas pagal įtaką galutiniam $\hat{M}$ sprendimui $x_0$ komponenčių (požymių) sąrašas (pilnas arba dalinis) \cite{ribeiroWhyShouldTrust2016}.
@@ -7,7 +7,7 @@ Svarbus \LIME parametras yra branduolio plotis \angl{kernel width} \omega. \LIME
 
 \LIME metodas yra paaiškinamo dirbtinio intelekto (\gls{xai}) pavyzdys. \gls{xai} gali būti naudojamas kaip \gls{ae} aptikimo strategija, jei paaiškinimai geba pastebimai atskirti \gls{ae} nuo tikrų įvesčių (pavyzdžiui, klasifikacijos paaiškinimas statistiškai reikšmingai skiriasi nuo tikrų duomenų paaiškinimų).
 
-\subsubsection{\Glsplko{adversarial} aptikimas \gls{ids} naudojant \LIME}
+\subsubsection{\Glsplko{adversarial} aptikimas \gls{ids} naudojant \LIME}\label{sec:literature:defense:ids}
 
 \glsxtrfull{ids} -- tai sistema, veikianti uždarame tinkle ir nuolat analizuojanti tinklo srautą. Vienas iš \gls{ids} įgyvendinimo būdų yra pasitelkti \gls{ml} modelius, tad šios sistemos taip pat yra pažeidžiamos \glsplkam{adversarial}. Šiame kontekste Tcydenova ir kt. pritaikė \LIME kaip \gls{ae} aptikimo strategiją. Jų siūlomas metodas \zr{fig:ids} \gls{ae} aptikimui susideda iš dviejų pagrindinių dalių \cite{tcydenovaDetectionAdversarialAttacks2021}:
 
