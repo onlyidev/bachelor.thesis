@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.6.0](https://github.com/onlyidev/bachelor.thesis/compare/v0.5.0...v0.6.0) (2025-04-18)
+
+
+### Features
+
+* **chap-2:** Added method description ([d181c2f](https://github.com/onlyidev/bachelor.thesis/commit/d181c2fda3bb8c72c1c7d61be38eda91d2d03dd0))
+* **chap-2:** Added methodology diagram ([bd92f1d](https://github.com/onlyidev/bachelor.thesis/commit/bd92f1d67365e6519b4b89b52ee07bbca2496a3f))
+* **literature:** Add LIME and IDS sections ([fc45c51](https://github.com/onlyidev/bachelor.thesis/commit/fc45c51769adb8eccf1a2aef9a3a230312eb5a19))
+* **literature:** PCA/MCA ([af9e9f8](https://github.com/onlyidev/bachelor.thesis/commit/af9e9f83d56db7362eba5ff0245d165ff4ad34d1))
+
+
+### Bug Fixes
+
+* **packages:** Remove cleverref ([06ea12c](https://github.com/onlyidev/bachelor.thesis/commit/06ea12c888b892901c2b66576f9e32318d0ca89c))
+
 ## [0.5.0](https://github.com/onlyidev/bachelor.thesis/compare/v0.4.0...v0.5.0) (2025-04-15)
 
 
