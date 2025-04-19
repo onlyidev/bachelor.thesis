@@ -19,9 +19,11 @@ todo["Todo"]
  Normal
  IDS-only
  Original
- Methodology
+ Results
+ Implications
 
 review["To review"]
+ Methodology
 done["Done"]
 ```
 
