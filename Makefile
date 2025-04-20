@@ -3,6 +3,12 @@ TEX_NAME:=$(NAME).tex
 PDF_NAME:=$(NAME).pdf
 LATEXMK_BASE_FLAGS:=-lualatex -file-line-error -Werror -emulate-aux-dir -aux-directory=out
 
+PLOTS:=../code/plots/*.png
+TABLES:=../code/plots/tables/*.csv
+TABLES_SRC:=../code/plots/tables/gen.py
+MCA_PLOT_SRC:=../code/plots/mca_scatter.py
+CONFUSION_PLOT_SRC:=../code/plots/confusion.py
+
 .PHONY: pdf
 pdf:
 	latexmk $(LATEXMK_BASE_FLAGS) -halt-on-error $(TEX_NAME)
@@ -29,3 +35,20 @@ clean:
 	rm -rf out/
 	rm -f $(wildcard *.out *.run.xml *.log *.blg *.bbl *.aux \
 	*.toc *.bcf *.synctex.gz *.fdb_latexmk *.fls *.xdv *.nav *.snm)
+
+.PHONY: img
+img: $(MCA_PLOT_SRC) $(CONFUSION_PLOT_SRC)
+	cp $(PLOTS) ./images
+
+$(MCA_PLOT_SRC):
+	python3 $(MCA_PLOT_SRC)
+
+$(CONFUSION_PLOT_SRC): 
+	python3 $(CONFUSION_PLOT_SRC)
+
+.PHONY: tables
+tables: $(TABLES)
+	cp $(TABLES) ./tables
+
+$(TABLES): $(TABLES_SRC)
+	python3 $(TABLES_SRC)

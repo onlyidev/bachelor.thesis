@@ -23,10 +23,10 @@ Su šiais įrankiais atliekami 3 eksperimentai:
 
 
 \subsection{\gls{mca} komponenčių pasirinkimas}
-Komponenčių pasirinkimas yra \ref{fig:methodology}-ame pav. minimo \gls{mca} modelio paruošimo dalis. Komponenčių pasirinkimui \ty jų kiekio pasirinkimui nėra apibrėžto \enquote{teisingo} metodo \cite{abdiPrincipalComponentAnalysis2010}. Dažniausiai siūlomi metodai yra tik didesnių už $1$ tikrinių reikšmių pasirinkimas ir \textit{alkūnės} \angl{scree / elbow} metodas. Šie metodai netiko, nes juos taikant paliktos \gls{mca} komponentės paaiškintų $<50\%$ visos \glsko{inertia}: visos tikrinės reikšmės analizuojamuose mokymo duomenyse yra $<1$, o alkūnės taške sukaupta \gls{inertia} yra $\sim 30\%$. \TODO~ Taigi pasirinkti 2 nestandartiniai \gls{mca} komponenčių kiekio kriterijai: 
+Komponenčių pasirinkimas yra \ref{fig:methodology}-ame pav. minimo \gls{mca} modelio paruošimo dalis. Komponenčių pasirinkimui \ty jų kiekio pasirinkimui nėra apibrėžto \enquote{teisingo} metodo \cite{abdiPrincipalComponentAnalysis2010}. Dažniausiai siūlomi metodai yra tik didesnių už $1$ tikrinių reikšmių pasirinkimas ir \textit{alkūnės} \angl{scree / elbow} metodas. Šie metodai netiko, nes juos taikant paliktos \gls{mca} komponentės paaiškintų $<50\%$ visos \glsko{inertia}: visos tikrinės reikšmės analizuojamuose mokymo duomenyse yra $<1$, o alkūnės taške sukaupta \gls{inertia} yra $\sim 30\%$ \zr{fig:inertia}. Taigi, pasirinkti 2 nestandartiniai \gls{mca} komponenčių kiekio kriterijai: 
 \begin{itemize}
     \item sukaupta \gls{inertia} $\ge 70\%$,
-    \item Išmokyto klasifikatoriaus tikslumas neblogesnis nei originalaus klasifikatoriaus \TODO.
+    \item Išmokyto klasifikatoriaus tikslumas nemažesnis nei originalaus klasifikatoriaus \TODO.
 \end{itemize}
 
 \begin{figure}[h]
@@ -35,6 +35,14 @@ Komponenčių pasirinkimas yra \ref{fig:methodology}-ame pav. minimo \gls{mca} m
     \caption{Tyrimo metodika}
     \label{fig:methodology}
 \end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{images/inertia_50.png}
+    \caption{\textit{Alkūnės} analizė \gls{mca} inercijai}
+    \label{fig:inertia}
+\end{figure}
+
 % --- PCA/MCA
 % Show graphs of 2 best components (~30% of inertia)
 % Show knee analysis of 50 then 9 components
