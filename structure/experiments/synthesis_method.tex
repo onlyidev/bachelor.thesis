@@ -1,18 +1,34 @@
-\subsection{\LIME ir \gls{mca} metodų sintezės tikslumo nustatymas}
+\subsubsection{\LIME ir \gls{mca} metodų sintezės tikslumo nustatymas}
 
 \TODO
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.45\textwidth]{images/synthesis_2x2.png}
-    \caption{TODO}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/synthesis_2x2.png}
+        \caption{Neišskiriant \textit{obfuskuotų} pavyzdžių klasės}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/synthesis_3x3.png}
+        \caption{Išskiriant \textit{obfuskuotų} pavyzdžių klasę}        
+    \end{subfigure}
+    \caption{\LIME ir \gls{mca} metodų sintezės klasifikavimo lentelės}
     \label{fig:exp3:confusion}
 \end{figure}
 
 \begin{table}[h]
     \caption{TODO}
     \centering
-    \exptable[0,708]{tables/synthesis_2x2.csv}
-    \label{tbl:exp3:metrics}
+    \exptable[\accLime]{tables/synthesis_2x2.csv}
+    \label{tbl:exp3:metrics2}
 \end{table}
+
+\begin{table}[h]
+    \caption{TODO}
+    \centering
+    \exptable[\accLimeObf]{tables/synthesis_3x3.csv}
+    \label{tbl:exp3:metrics3}
+\end{table}
+
 % Show results with original method

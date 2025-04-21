@@ -1,20 +1,39 @@
-\subsection{\LIME pritaikymo \gls{ae} aptikimui tikslumo nustatymas}
+\subsubsection{Modifikuoto \LIME pritaikymo \gls{ae} aptikimui tikslumo nustatymas}
 
-\TODO
+Šio eksperimento tikslas yra nustatyti modifikuoto \LIME pritaikymo \gls{ae} aptikimui (\ref{sec:method:mods}) tikslumą. \LIME branduolio plotis paliekamas pagal numatytus nustatymus ($\omega = \lfloor 0,75 \cdot \sqrt{n} \rfloor$, čia $n$ -- požymių skaičius, taigi, $\omega = \lfloor 0,75 \cdot \sqrt{200} \rfloor = 10$) \cite{ribeiroWhyShouldTrust2016}.
+
+Kadangi šis metodas geba aptikti \gls{ae} -- obfuskuotas programas --
+\ref{fig:exp2:confusion}-ame pav. pateikiamos dvi klasifikacijos lentelės. Pirmoje (\ref{fig:exp2:confusion:a}) -- klasifikacijos rezultatai, kai obfuskuota programa laikoma kenkėjiška. Antroje (\ref{fig:exp2:confusion:b}) -- išskiriama \textit{obfuskuota} klasė. Kadangi išskyrus šia klasę duomenų rinkinys tampa subalansuotas, klasifikavimo lentelėje pateikiami sveiki skaičiai, atitinkantys modelio prognozuojamų duomenų tai klasei kiekį.
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.45\textwidth]{images/lime_2x2.png}
-    \caption{TODO}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/lime_2x2.png}
+        \caption{Neišskiriant \textit{obfuskuotų} pavyzdžių klasės}
+        \label{fig:exp2:confusion:a}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/lime_3x3.png}
+        \caption{Išskiriant \textit{obfuskuotų} pavyzdžių klasę}
+        \label{fig:exp2:confusion:b}
+    \end{subfigure}
+    \caption{\LIME pritaikymo \gls{ae} aptikimui klasifikavimo lentelės}
     \label{fig:exp2:confusion}
 \end{figure}
 
 \begin{table}[h]
     \caption{TODO}
     \centering
-    \exptable[0,669]{tables/lime_2x2.csv}
-    \label{tbl:exp2:metrics}
+    \exptable[\accLimeCat]{tables/lime_2x2.csv}
+    \label{tbl:exp2:metrics2}
 \end{table}
 
+\begin{table}[h]
+    \caption{TODO}
+    \centering
+    \exptable[\accLimeCatObf]{tables/lime_3x3.csv}
+    \label{tbl:exp2:metrics3}
+\end{table}
 
 % Use the paper method and show results that do not perform well

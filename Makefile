@@ -5,6 +5,7 @@ LATEXMK_BASE_FLAGS:=-lualatex -file-line-error -Werror -emulate-aux-dir -aux-dir
 
 PLOTS:=../code/plots/*.png
 TABLES:=../code/plots/tables/*.csv
+TABLE_ACC:=../code/plots/tables/acc.tex
 TABLES_SRC:=../code/plots/tables/gen.py
 MCA_PLOT_SRC:=../code/plots/mca_scatter.py
 CONFUSION_PLOT_SRC:=../code/plots/confusion.py
@@ -38,17 +39,11 @@ clean:
 
 .PHONY: img
 img: $(MCA_PLOT_SRC) $(CONFUSION_PLOT_SRC)
+	python3 $(MCA_PLOT_SRC)
+	python3 $(CONFUSION_PLOT_SRC)
 	cp $(PLOTS) ./images
 
-$(MCA_PLOT_SRC):
-	python3 $(MCA_PLOT_SRC)
-
-$(CONFUSION_PLOT_SRC): 
-	python3 $(CONFUSION_PLOT_SRC)
-
 .PHONY: tables
-tables: $(TABLES)
-	cp $(TABLES) ./tables
-
-$(TABLES): $(TABLES_SRC)
+tables:
 	python3 $(TABLES_SRC)
+	cp $(TABLES) $(TABLE_ACC) ./tables
