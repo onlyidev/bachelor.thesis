@@ -27,7 +27,7 @@
 \strat~\angl{transferability blocking} -- tai varžymosi principais pagrįsto pertreniravimo \skyrius{sec:literature:defense:retraining}{} praplėtimas, įtraukiant naują (\textit{NULL}) kategoriją į galimas klasifikatoriaus išvestis. Ši strategija praplečia klasifikatoriaus treniravimą į šiuos etapus:
 \begin{enumerate}
     \item Įprastas klasifikatoriaus treniravimas.
-    \item \textit{NULL} tikimybių skaičiavimas -- suprantama kaip \glsko{adversarial} tikimybė. Tikimybių skaičiavimas pateiktas \ref{eq:null}-oje lygtyje.
+    \item \textit{NULL} tikimybių funkcijos $f$ skaičiavimas. $p_{NULL}$ suprantama kaip \glsko{adversarial} tikimybė. \textit{NULL} tikimybių ir jų skaičiavimo funkcijos $f$ ryšys pateiktas \ref{eq:null}-oje lygtyje.
     \item Varžymosi principais pagrįstas pertreniravimas, įtraukiant tiek originalias įvestis, tiek perturbuotas ($\delta X$).
 \end{enumerate}
 

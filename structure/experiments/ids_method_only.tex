@@ -1,6 +1,6 @@
 \subsubsection{Modifikuoto \LIME pritaikymo \gls{ae} aptikimui tikslumo nustatymas}
 
-Šio eksperimento tikslas yra nustatyti modifikuoto \LIME pritaikymo \gls{ae} aptikimui (\ref{sec:method:mods}) tikslumą. \LIME branduolio plotis paliekamas pagal numatytus nustatymus ($\omega = \lfloor 0,75 \cdot \sqrt{n} \rfloor$, čia $n$ -- požymių skaičius, taigi, $\omega = \lfloor 0,75 \cdot \sqrt{200} \rfloor = 10$) \cite{ribeiroWhyShouldTrust2016}.
+Šio eksperimento tikslas yra nustatyti modifikuoto \LIME pritaikymo \gls{ae} aptikimui (\ref{sec:method:mods}) tikslumą. \LIME branduolio plotis paliekamas pagal numatytus nustatymus ($\omega = 0,75 \cdot \sqrt{n}$, čia $n$ -- požymių skaičius, taigi, $\omega = 0,75 \cdot \sqrt{200} \approx 10,61$) \cite{ribeiroWhyShouldTrust2016}.
 
 Kadangi šis metodas geba aptikti \gls{ae} -- obfuskuotas programas --
 \ref{fig:exp2:confusion}-ame pav. pateikiamos dvi klasifikacijos lentelės. Pirmoje (\ref{fig:exp2:confusion:a}) -- klasifikacijos rezultatai, kai obfuskuota programa laikoma kenkėjiška. Antroje (\ref{fig:exp2:confusion:b}) -- išskiriama \textit{obfuskuota} klasė. Kadangi išskyrus šia klasę duomenų rinkinys tampa subalansuotas, klasifikavimo lentelėje pateikiami sveiki skaičiai, atitinkantys modelio prognozuojamų duomenų tai klasei kiekį.

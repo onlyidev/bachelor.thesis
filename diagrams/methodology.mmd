@@ -1,7 +1,8 @@
-%% ---
-%% config:
-%%   layout: elk
-%% ---
+---
+config:
+  flowchart:
+    curve: "basis"
+---
 flowchart
 sleipnir[("SLEIPNIR duomenų rinkinys")]
 data("Duomenų rinkinio paruošimas, skaidymas į mokymo ir testavimo aibes, požymių pasirinkimas")
@@ -15,8 +16,9 @@ classify("Klasifikatoriaus mokymas su originaliais požymiais")
 collect("Nekenkėjiškų požymių statistikų rinkimas naudojant LIME")
 lime("Varžymosi principais grįstų atakų aptikimo komponento paruošimas")
 exp1["Eksperimentas #1 <hr/> Originalaus klasifikatoriaus tikslumo nustatymas"]
-exp2["Eksperimentas #2 <hr/> Klasifikatoriaus tikslumo nustatymas taikant LIME AE aptikimo metodą"]
-exp3["Eksperimentas #3 <hr/> Klasifikatoriaus tikslumo nustatymas taikant apjungtą LIME ir MCA AE aptikimo metodą"]
+exp4["Eksperimentas #2 <hr/> Klasifikatoriaus tikslumo nustatymas taikant MCA transformaciją"]
+exp2["Eksperimentas #3 <hr/> Klasifikatoriaus tikslumo nustatymas taikant LIME AE aptikimo metodą"]
+exp3["Eksperimentas #4 <hr/> Klasifikatoriaus tikslumo nustatymas taikant apjungtą LIME ir MCA AE aptikimo metodą"]
 
 sleipnir -.-> data -.-> data_test & data_train
 data_train -.-> train
@@ -24,14 +26,14 @@ data_train -.-> mca --> classify_mca
 data_train -.-> classify
 data_test -.-> Tyrimas
 
-classify --> collect
-classify_mca --> collect
+classify --> exp1 & collect
+classify_mca --> collect & exp4
 train --> Tyrimas
 collect --> lime --> exp2 & exp3
-classify --> Tyrimasd
 
 subgraph Tyrimas
     exp1
+    exp4
     exp2
     exp3
     end
