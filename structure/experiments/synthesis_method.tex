@@ -2,6 +2,8 @@
 
 Šio eksperimento tikslas yra nustatyti autoriaus siūlomos modifikuoto \LIME ir \gls{mca} metodų sintezės \glsplko{adversarial} aptikimui tikslumą. Kaip ir praeitame eksperimente, \ref{fig:exp3:confusion}-ame pav. pateikiamos dvi klasifikavimo lentelės -- išskiriant ir neišskiriant \textit{obfuskuotą} klasę. 
 
+Eksperimento rezultatai (klasifikavimo metrikos) pateikiami \ref{tbl:exp3:metrics2}-oje ir \ref{tbl:exp3:metrics3}-oje lentelėse.
+
 \begin{figure}[h]
     \begin{subfigure}{0.5\textwidth}
         \centering
@@ -18,17 +20,15 @@
 \end{figure}
 
 \begin{table}[h]
-    \caption{TODO}
+    \caption{\LIME ir \gls{mca} metodų sintezės klasifikatoriaus metrikos (neišskiriant \textit{obfuskuotos} klasės)}
     \centering
     \exptable[\accLime]{tables/synthesis_2x2.csv}
     \label{tbl:exp3:metrics2}
 \end{table}
 
 \begin{table}[h]
-    \caption{TODO}
+    \caption{\LIME ir \gls{mca} metodų sintezės klasifikatoriaus metrikos (išskiriant \textit{obfuskuotą} klasę)}
     \centering
     \exptable[\accLimeObf]{tables/synthesis_3x3.csv}
     \label{tbl:exp3:metrics3}
 \end{table}
-
-% Show results with original method

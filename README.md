@@ -16,15 +16,15 @@ done["Done"]
 ```mermaid
 kanban
 todo["Todo"]
- MCA-EQUIV
- Original
  Results
  Implications
 
 review["To review"]
+ Original
  Methodology
  Normal
  IDS-only
+ MCA-EQUIV
 done["Done"]
 ```
 

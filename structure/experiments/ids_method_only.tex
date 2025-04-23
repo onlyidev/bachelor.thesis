@@ -5,6 +5,7 @@
 Kadangi šis metodas geba aptikti \gls{ae} -- obfuskuotas programas --
 \ref{fig:exp2:confusion}-ame pav. pateikiamos dvi klasifikacijos lentelės. Pirmoje (\ref{fig:exp2:confusion:a}) -- klasifikacijos rezultatai, kai obfuskuota programa laikoma kenkėjiška. Antroje (\ref{fig:exp2:confusion:b}) -- išskiriama \textit{obfuskuota} klasė. Kadangi išskyrus šia klasę duomenų rinkinys tampa subalansuotas, klasifikavimo lentelėje pateikiami sveiki skaičiai, atitinkantys modelio prognozuojamų duomenų tai klasei kiekį.
 
+Eksperimento rezultatai (klasifikavimo metrikos) pateikiami \ref{tbl:exp2:metrics2}-oje ir \ref{tbl:exp2:metrics3}-oje lentelėse.
 \begin{figure}[h]
     \begin{subfigure}{0.5\textwidth}
         \centering
@@ -23,14 +24,14 @@ Kadangi šis metodas geba aptikti \gls{ae} -- obfuskuotas programas --
 \end{figure}
 
 \begin{table}[h]
-    \caption{TODO}
+    \caption{\LIME pritaikymo \gls{ae} aptikimui klasifikatoriaus metrikos (neišskiriant \textit{obfuskuotos} klasės)}
     \centering
     \exptable[\accLimeCat]{tables/lime_2x2.csv}
     \label{tbl:exp2:metrics2}
 \end{table}
 
 \begin{table}[h]
-    \caption{TODO}
+    \caption{\LIME pritaikymo \gls{ae} aptikimui klasifikatoriaus metrikos (išskiriant \textit{obfuskuotą} klasę)}
     \centering
     \exptable[\accLimeCatObf]{tables/lime_3x3.csv}
     \label{tbl:exp2:metrics3}
