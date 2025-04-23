@@ -27,6 +27,14 @@ review["To review"]
  MCA-EQUIV
 done["Done"]
 ```
+## Improvements Kanban
+```mermaid
+kanban
+todo["Todo"]
+  scree["Improve MCA scree analysis visual"]
+done["Done"]
+
+```
 
 ## Plan
 

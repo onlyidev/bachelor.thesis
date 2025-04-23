@@ -1,6 +1,6 @@
 \input{tables/acc}
 
-\newcommand{\exptable}[2][N/A]{
+\newcommand{\exptable}[2][0]{
     \begin{tabular}{l|c|c|c}%
         \bfseries Klasė / Svertinis vidurkis & \bfseries Preciziškumas & \bfseries Atkūrimas & \bfseries F1
         \csvreader{#2}{}
@@ -8,6 +8,6 @@
         \\\hline\csvcoli & \num{\csvcolii} & \num{\csvcoliii} & \num{\csvcoliv}
           }
           \\\hline\hline
-          \multicolumn{3}{r}{Tikslumas:} & #1
+          \multicolumn{3}{r}{Tikslumas:} & \num{#1}
     \end{tabular}
 }
