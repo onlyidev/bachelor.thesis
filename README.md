@@ -23,6 +23,7 @@ review["To review"]
  Methodology
  Normal
  IDS-only
+
  MCA-EQUIV
  Results
 done["Done"]
@@ -32,9 +33,9 @@ done["Done"]
 kanban
 todo["Todo"]
   malgan["Explain selection of MalGAN"]
-  scree["Improve MCA scree analysis visual"]
   expl["LIME + MCA is not XAI in human-comprehensible terms"]
 done["Done"]
+  scree["Improve MCA scree analysis visual"]
 
 ```
 

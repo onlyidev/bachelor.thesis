@@ -33,7 +33,7 @@ Su šiais įrankiais atliekami 4 eksperimentai:
 
 \clearpage
 \subsection{\gls{mca} komponenčių pasirinkimas}\label{sec:method:mca_comp_selection}
-Komponenčių pasirinkimas yra \ref{fig:methodology}-ame pav. minimo \gls{mca} modelio paruošimo dalis. Komponenčių pasirinkimui \ty jų kiekio pasirinkimui nėra apibrėžto \enquote{teisingo} metodo \cite{abdiPrincipalComponentAnalysis2010}. Dažniausiai siūlomi metodai yra tik didesnių už $1$ tikrinių reikšmių pasirinkimas ir \textit{alkūnės} \angl{scree / elbow} metodas. Šie metodai netiko, nes juos taikant paliktos \gls{mca} komponentės paaiškintų $<50\%$ visos \glsko{inertia}: visos tikrinės reikšmės analizuojamuose mokymo duomenyse yra $<1$, o alkūnės taške sukaupta \gls{inertia} yra $\sim 30\%$ \zr{fig:inertia}. Taigi, pasirinkti 2 nestandartiniai \gls{mca} komponenčių kiekio kriterijai: 
+Komponenčių pasirinkimas yra \ref{fig:methodology}-ame pav. minimo \gls{mca} modelio paruošimo dalis. Komponenčių pasirinkimui \ty jų kiekio pasirinkimui nėra apibrėžto \enquote{teisingo} metodo \cite{abdiPrincipalComponentAnalysis2010}. Dažniausiai siūlomi metodai yra tik didesnių už $1$ tikrinių reikšmių pasirinkimas ir \textit{alkūnės} \angl{scree / elbow} metodas. Šie metodai netiko, nes juos taikant paliktos \gls{mca} komponentės nepaaiškintų net pusės visos \glsko{inertia}: visos tikrinės reikšmės analizuojamuose mokymo duomenyse yra $<1$, o alkūnės taške sukaupta \gls{inertia} yra $\num{47,62} \%$ \zr{fig:inertia}. Taigi, pasirinkti 2 nestandartiniai \gls{mca} komponenčių kiekio kriterijai: 
 
 \noindent
 \begin{minipage}[l]{0.48\textwidth}
@@ -46,7 +46,7 @@ Komponenčių pasirinkimas yra \ref{fig:methodology}-ame pav. minimo \gls{mca} m
 \hspace{0.02\textwidth}
 \begin{minipage}{0.5\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{images/inertia_50.png}
+    \includegraphics[width=\textwidth]{images/scree.png}
     \vspace{-1cm}
     \captionof{figure}{\textit{Alkūnės} analizė \gls{mca} inercijai}
     \label{fig:inertia}
