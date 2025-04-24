@@ -1,0 +1,34 @@
+\section{Rezultatai ir išvados}
+
+\subsection*{Rezultatai}
+
+\begin{table}[h]
+    \centering
+    \caption{Eksperimentų rezultatų (tikslumo metrikų) suvestinė}
+    \begin{tabular}{l|c|c}
+        \bfseries Eksperimentas &\bfseries Tikslumas (K/N)\footnotemark &\bfseries Tikslumas (K/N/O)\footnotemark \\ \hline
+        \ref{sec:exp:1} Bazinis & \num{\accNormal} & - \\
+        \ref{sec:exp:4} \gls{mca} & \num{\accMcaEquiv} & - \\
+        \ref{sec:exp:2} \LIME & \num{\accLimeCat} & \num{\accLimeCatObf} \\
+        \ref{sec:exp:3} \LIME + \gls{mca} & \num{\accLime} & \num{\accLimeObf} \\
+    \end{tabular}
+    \label{tbl:exp:summary}
+\end{table}
+\addtocounter{footnote}{-1}
+\footnotetext{Kenkėjiška / Nekenkėjiška}
+\stepcounter{footnote}
+\footnotetext{Kenkėjiška / Nekenkėjiška / Obfuskuota}
+
+\begin{enumerate}
+    \item Apžvelgti ir pritaikyti mokslinėje literatūroje minimi kodo obfuskacijos bei \glsplko{adversarial} -- \gls{ae} generavimo -- metodai, jų aptikimo strategijos \skyrius{sec:literature}.
+    \item Pasiūlytas naujas \gls{ae} aptikimo metodas, pritaikomas bet kokiam kenkėjiškų programų detektoriui bei gebantis apdoroti dvejetainius požymius, apjungiantis \LIME pritaikymo \gls{ae} aptikimui ir \gls{mca} transformacijos idėjas \skyrius{sec:method}.
+    \item Atliktas \gls{ae} aptikimo metodų lyginamosios analizės tyrimas \skyrius{sec:experiments} ir nustatytas pasiūlyto \gls{ae} aptikimo metodo \skyrius{sec:method} efektyvumas (matuojant modelio tikslumą ir atsižvelgiant į kitas klasifikacijos metrikas), lyginant pasiūlytą metodą su jo sudedamosiomis dalimis \Zr{tbl:exp:summary}.
+\end{enumerate}
+
+
+\subsection*{Išvados}
+
+\begin{enumerate}
+    \item Autoriaus siūlomas \gls{ae} aptikimo metodas lyginamosios analizės tyrime pasiekė geriausią rezultatą (didžiausią tikslumą). Taip pat buvo pranašesnis už likusius modelius visomis kitomis lyginamomis metrikomis (preciziškumu, atkūrimu ir F1).
+    \item \TODO
+\end{enumerate}

@@ -16,7 +16,6 @@ done["Done"]
 ```mermaid
 kanban
 todo["Todo"]
- Results
  Implications
 
 review["To review"]
@@ -25,13 +24,16 @@ review["To review"]
  Normal
  IDS-only
  MCA-EQUIV
+ Results
 done["Done"]
 ```
 ## Improvements Kanban
 ```mermaid
 kanban
 todo["Todo"]
+  malgan["Explain selection of MalGAN"]
   scree["Improve MCA scree analysis visual"]
+  expl["LIME + MCA is not XAI in human-comprehensible terms"]
 done["Done"]
 
 ```
