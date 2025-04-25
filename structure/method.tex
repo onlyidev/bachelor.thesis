@@ -26,13 +26,24 @@ gauti dar tikslesnį \gls{ae} aptikimo metodą \zr{fig:original}.
 \clearpage
 \subsection{\LIME branduolio pločio pasirinkimas}
 \LIME branduolio plotį \skyrius{sec:literature:lime} gali padėti nustatyti duomenų vizualizacijos ar kita duomenų analizė. Tai atlikti nėra sudėtinga, kai požymių vektoriaus dimensija nedidelė arba požymiai yra skaitiniai, tačiau turint kategorinius požymius ir atsižvelgiant į jų kodavimą dvejetainiais vektoriais, parinkti tinkamą \LIME branduolio plotį gali būti sudėtinga. Taikant \gls{mca} transformaciją neretai užtenka branduolio pločio vertę parinkti pagal pirmų dviejų komponenčių skalę, kadangi šios dvi komponentės apibūdina didžiausią inerciją \zr{fig:scree}.
-\vspace{5cm}
 \begin{figure}[h]
         \centering
         \includegraphics[width=0.6\textwidth]{images/mca_scatter.png}
         \caption{Pirmųjų dviejų \gls{mca} transformacijos komponenčių pavyzdys}
         \label{fig:scree}
 \end{figure}
+
+\subsection{Panaudos atvejai}
+\begin{enumerate}
+    \item {\bfseries \Glsplkam{adversarial} atsparus klasifikatorius.}
+     Šiuo atveju naudojamas praplėstas klasifikavimo procesas, visiškai atitinkantis \ref{fig:original}-ią pav. Klasifikatoriaus klasės išlieka tokios pačios. 
+    \item {\bfseries \Glsplko{adversarial} indikatorius.} 
+    Taip pat naudojamas praplėstas klasifikavimo procesas, tik šiuo atveju, jei originalaus klasifikatoriaus sprendimas buvo klasifikuoti įvestį kaip \textit{nekenkėjišką}, o tolimesnės analizės rezultatas buvo klasifikuoti įvestį kaip \textit{kenkėjišką} -- tuomet įvesčiai priskiriama \textit{obfuskuota} klasė. 
+\end{enumerate}
+
+\subsection{Paaiškinamumo aspektas}
+
+Nors \LIME metodas skirtas paaiškinti sudėtingų modelių sprendimus taip, kad žmogus gebėtų juos interpretuoti ir suprasti, autoriaus siūlomas metodas šią savybę praranda. Pagrindinė to priežastis yra tai, jog šiame metode \LIME paaiškina \gls{mca} transformacijos duomenis, kurie savaime nėra interpretuojami. Tuo atveju, kai siūlomas metodas naudojamas kaip \textbf{atakos indikatorius}, tai reiškia, jog šis metodas negali pateikti interpretuojamo paaiškinimo, kodėl tam tikra įvestis yra laikoma obfuskuota.  
 
 % Problem with selecting N components to explain
 % Problem with binary feature vectors
