@@ -8,19 +8,16 @@
 \usepackage{color,algorithm,algorithmic}
 \usepackage[nottoc]{tocbibind}
 \usepackage{tocloft}
+\setlength{\cftbeforesecskip}{1pt}
+\setlength{\cftbeforesubsecskip}{1pt}
 
 \usepackage{titlesec}
-
 \usepackage{biblatex}
-% \bibliography{Sem 8 Practice}
-% \bibliography{internet}
-%% norint pakeisti bibliografijos šaltinių numeravimą (skaitiniu arba raidiniu), pakeitimus atlikti VUMIFTemplateClass.cls 150 eilutėje
-
 \usepackage{longtable}
 \usepackage{booktabs}
 
 % Custom for this work
-\usepackage[acronym]{glossaries-extra}
+\usepackage[acronym,nonumberlist]{glossaries-extra}
 \input{setups/gls}
 \bibliography{course_work}
 \bibliography{thesis}
@@ -35,4 +32,5 @@
 \usepackage{siunitx}
 \sisetup{output-decimal-marker = {,}}
 \usepackage{subcaption}
+\captionsetup{justification=centering}
 \usepackage{luamaths}
