@@ -32,9 +32,9 @@ done["Done"]
 ```mermaid
 kanban
 todo["Todo"]
+done["Done"]
   malgan["Explain selection of MalGAN"]
   expl["LIME + MCA is not XAI in human-comprehensible terms"]
-done["Done"]
   scree["Improve MCA scree analysis visual"]
 
 ```

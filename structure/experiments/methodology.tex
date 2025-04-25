@@ -31,6 +31,15 @@ Su šiais įrankiais atliekami 4 eksperimentai:
     \label{fig:methodology}
 \end{figure}
 
+\subsection{\Glsplko{adversarial} \glsko{framework} pasirinkimas}
+
+Tyrimui pasirinktas \refFramework{MalGAN} \gls{framework} dėl šių priežasčių:
+\begin{itemize}
+    \item \gls{gan} yra vieni iš perspektyviausių ir efektyviausių \gls{ml} modelių \gls{ae} generavimui.
+    \item \textit{MalGAN} yra plačiai naudojamas kaip bazinis modelis tolimesniems tyrimas, yra kelios atviro kodo repozitorijos\footnote{Šiam tyrimui pasirinkta https://github.com/ZaydH/MalwareGAN repozitorija, kaip pradinis \textit{MalGAN} įgyvendinimas}, įgyvendinančios šį \glska{framework}.
+    \item \textit{MalGAN} naudoja dvejetainius požymių vektorius. Būtent tokie požymiai turėtų kelti sunkumų esamiems \gls{ae} aptikimo metodams \skyrius{sec:method:mods}.
+\end{itemize}
+
 \clearpage
 \subsection{\gls{mca} komponenčių pasirinkimas}\label{sec:method:mca_comp_selection}
 Komponenčių pasirinkimas yra \ref{fig:methodology}-ame pav. minimo \gls{mca} modelio paruošimo dalis. Komponenčių pasirinkimui \ty jų kiekio pasirinkimui nėra apibrėžto \enquote{teisingo} metodo \cite{abdiPrincipalComponentAnalysis2010}. Dažniausiai siūlomi metodai yra tik didesnių už $1$ tikrinių reikšmių pasirinkimas ir \textit{alkūnės} \angl{scree / elbow} metodas. Šie metodai netiko, nes juos taikant paliktos \gls{mca} komponentės nepaaiškintų net pusės visos \glsko{inertia}: visos tikrinės reikšmės analizuojamuose mokymo duomenyse yra $<1$, o alkūnės taške sukaupta \gls{inertia} yra $\num{47,62} \%$ \zr{fig:inertia}. Taigi, pasirinkti 2 nestandartiniai \gls{mca} komponenčių kiekio kriterijai: 
