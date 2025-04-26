@@ -5,19 +5,21 @@
 \begin{table}[h]
     \centering
     \caption{Eksperimentų rezultatų (tikslumo metrikų) suvestinė}
-    \begin{tabular}{l|c|c}
-        \bfseries Eksperimentas &\bfseries Tikslumas (K/N)\footnotemark &\bfseries Tikslumas (K/N/O)\footnotemark \\ \hline
-        \ref{sec:exp:1} Bazinis & \num{\accNormal} & - \\
-        \ref{sec:exp:4} \gls{mca} & \num{\accMcaEquiv} & - \\
-        \ref{sec:exp:2} \LIME & \num{\accLimeCat} & \num{\accLimeCatObf} \\
-        \ref{sec:exp:3} \LIME + \gls{mca} & \num{\accLime} & \num{\accLimeObf} \\
+    \begin{tabular}{l|c|c|r}
+        \bfseries Eksperimentas &\bfseries Tikslumas (K/N)\footnotemark &\bfseries Tikslumas (K/N/O)\footnotemark & $\Delta a\footnotemark,\;\%$ \\ \hline
+        \ref{sec:exp:1} Bazinis & \num{\accNormal} & - & $\num{\mathOp{(\accNoAttackNormal - \accNormal)*100}}$ \\
+        \ref{sec:exp:4} \gls{mca} & \num{\accMcaEquiv} & - & $\num{\mathOp{(\accNoAttackNormal - \accMcaEquiv)*100}}$ \\
+        \ref{sec:exp:2} \LIME & \num{\accLimeCat} & \num{\accLimeCatObf} & $\num{\mathOp{(\accNoAttackNormal - \accLimeCat)*100}}$ \\
+        \ref{sec:exp:3} \LIME + \gls{mca} & \num{\accLime} & \num{\accLimeObf} & $\num{\mathOp{(\accNoAttackNormal - \accLime)*100}}$ \\
     \end{tabular}
     \label{tbl:exp:summary}
 \end{table}
-\addtocounter{footnote}{-1}
+\addtocounter{footnote}{-2}
 \footnotetext{Kenkėjiška / Nekenkėjiška}
 \stepcounter{footnote}
 \footnotetext{Kenkėjiška / Nekenkėjiška / Obfuskuota}
+\stepcounter{footnote}
+\footnotetext{Skirtumas tarp originalaus klasifikatoriaus tikslumo aplinkoje be \glsplko{adversarial} \Zr{tbl:safe:original:metrics} ir \textbf{tikslumo (K/N)} aplinkoje su \glsplkuo{adversarial}}
 
 \begin{enumerate}
     \item Apžvelgti ir pritaikyti mokslinėje literatūroje minimi kodo obfuskacijos bei \glsplko{adversarial} -- \gls{ae} generavimo -- metodai, jų aptikimo strategijos \skyrius{sec:literature}.
@@ -30,5 +32,6 @@
 
 \begin{enumerate}
     \item Autoriaus siūlomas \gls{ae} aptikimo metodas lyginamosios analizės tyrime pasiekė geriausią rezultatą (didžiausią tikslumą). Taip pat buvo pranašesnis už likusius modelius visomis kitomis lyginamomis metrikomis (preciziškumu, atkūrimu ir F1).
-    \item \TODO
+    \item Autoriaus siūlomo metodo $\Delta a$ yra mažiausia, taigi, tiek \glsplko{adversarial} aptikimo logika, tiek pačios \glspl{adversarial} turi palyginti mažą įtaką šio klasifikatoriaus tikslumui.
+    \item Autoriaus siūlomas metodas aptinka 3 iš 4 \glsplko{adversarial} su $\num{76}\%$ preciziškumu. Lyginant su \LIME metodo pritaikymu \gls{ae} aptikimui (vieninteliu kitu metodu iš nagrinėtų, gebančiu aptikti \textit{obfuskuotą} klasę), atakų aptikimo santykis yra panašus, tačiau \LIME metodo pritaikymo preciziškumas -- tik $\num{49,5}\%$.
 \end{enumerate}
