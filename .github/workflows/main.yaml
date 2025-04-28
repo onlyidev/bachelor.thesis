@@ -78,7 +78,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: prod
-          path: ./thesis_${{ env.RELEASE_VERSION }}.pdf
+          path: ./
+      - name: Rename file
+        run: mv ./*.pdf ./thesis_${{ env.RELEASE_VERSION }}.pdf
       - name: Upload release assets
         uses: alexellis/upload-assets@0.4.0
         env:
