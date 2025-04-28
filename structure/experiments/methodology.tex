@@ -6,7 +6,7 @@ Visa tyrimo metodika pavaizduota \ref{fig:methodology}-ame pav. Tyrimui pasirink
 Eksperimentams atlikti paruošiamos šios priemonės:
 \begin{enumerate}
     \item Testavimo duomenų aibė, iš kurios sudaromas trijų tipų programų požymių srautas: nekenkėjiškos, kenkėjiškos, kenkėjiškos-obfuskuotos.
-    \item \textit{MalGAN} \cite{huGeneratingAdversarialMalware2017} \gls{ae} generatorius.
+    \item \textit{MalGAN} \cite{huGeneratingAdversarialMalware2017} \gls{ae} generatorius. Pasirinkimo motyvacija pateikiama \ref{sec:method:malgan} poskyryje.
     \item Kenkėjiškų programų detektorius (klasifikatorius).
     \item \Glsplko{adversarial} aptikimo komponentas
     \begin{itemize}
@@ -16,12 +16,12 @@ Eksperimentams atlikti paruošiamos šios priemonės:
 \end{enumerate}
 
 \noindent
-Su šiais įrankiais atliekami 4 eksperimentai:
+Su šiais įrankiais atliekami 4 eksperimentai \textbf{aplinkoje su \glsplkuo{adversarial}}:
     \begin{enumerate}
-        \item Bazinis atvejis -- klasifikatoriaus be \glsplko{adversarial} aptikimo metodų tikslumo nustatymas.
+        \item Bazinis atvejis -- originalaus klasifikatoriaus tikslumo nustatymas.
         \item Klasifikatoriaus, naudojančio \gls{mca} transformuotus požymius, tikslumo nustatymas.
-        \item Klasifikatoriaus su \LIME metodo pritaikymo \glsplko{adversarial} aptikimui modifikacija tikslumo nustatymas.
-        \item Klasifikatoriaus su \LIME ir \gls{mca} metodų sintezės \glsplko{adversarial} aptikimui modifikacija tikslumo nustatymas.
+        \item Klasifikatoriaus praplėtimo su modifikuoto \LIME metodo pritaikymu \glsplko{adversarial} aptikimui tikslumo nustatymas.
+        \item Klasifikatoriaus praplėtimo su \LIME ir \gls{mca} metodų sinteze \glsplko{adversarial} aptikimui tikslumo nustatymas.
     \end{enumerate}
 
 \begin{figure}[h]
@@ -31,7 +31,7 @@ Su šiais įrankiais atliekami 4 eksperimentai:
     \label{fig:methodology}
 \end{figure}
 
-\subsection{\Glsplko{adversarial} \glsko{framework} pasirinkimas}
+\subsection{\Glsplko{adversarial} \glsko{framework} pasirinkimas}\label{sec:method:malgan}
 
 Tyrimui pasirinktas \refFramework{MalGAN} \gls{framework} dėl šių priežasčių:
 \begin{itemize}

@@ -13,7 +13,7 @@ gauti dar tikslesnį \gls{ae} aptikimo metodą \zr{fig:original}.
 \noindent
 \begin{minipage}{0.45\textwidth}
     \hspace{1cm}
-    \ref{sec:literature:defense:ids} skyriuje siūlomas \LIME pritaikymas remiasi svarbiausių (didžiausią įtaką \gls{ml} modelio sprendimų priėmimui turinčių) požymių analize. Svarbiausi požymiai laikomi pirmieji 10 \cite{tcydenovaDetectionAdversarialAttacks2021}. Nors autoriai neaprašo kaip pasirenkama tokia konstanta, akivaizdu, jog ji nėra tinkama visiems atvejams. Pavyzdžiui, turint žymiai daugiau požymių, ši konstanta gali būti per maža. Tokia problema ypač aktuali kai analizuojami kategoriniai požymiai, turintys daug kategorijų (dažniausiai koduojami kaip dvejetainiai vektoriai -- \Angl{one-hot encoding}). Dėl šios priežasties, autoriaus siūlymas yra \enquote{svarbiais} laikyti visus požymius ir mokymo fazės pabaigoje apskaičiuoti šių požymių įtakos \gls{ml} modelio sprendimo priėmimui statistikas (vidurkį ir standartinį nuokrypį). Tuomet aptikimo fazėje naudoti $3 \sigma$ taisyklę \cite{pukelsheimThreeSigmaRule1994} \ty jei bent vieno požymio įtaka \gls{ml} sprendimo priėmimui nukrypsta per 3 standartinius nuokrypius nuo duotojo požymio vidurkio -- laikyti, jog analizuojama įvestis buvo obfuskuota.
+    \ref{sec:literature:defense:ids} skyriuje siūlomas \LIME pritaikymas \gls{ae} aptikimui remiasi svarbiausių (didžiausią įtaką \gls{ml} modelio sprendimų priėmimui turinčių) požymių analize. Svarbiausi požymiai laikomi pirmieji 10 \cite{tcydenovaDetectionAdversarialAttacks2021}. Nors autoriai neaprašo kaip pasirenkama tokia konstanta, akivaizdu, jog ji nėra tinkama visiems atvejams. Pavyzdžiui, turint žymiai daugiau požymių, ši konstanta gali būti per maža. Tokia problema ypač aktuali kai analizuojami kategoriniai požymiai, turintys daug kategorijų (dažniausiai koduojami kaip dvejetainiai vektoriai). Dėl šios priežasties, autoriaus siūlymas yra \enquote{svarbiais} laikyti visus požymius ir mokymo fazės pabaigoje apskaičiuoti šių požymių įtakos \gls{ml} modelio sprendimo priėmimui statistikas (vidurkį ir standartinį nuokrypį). Tuomet aptikimo fazėje naudoti $3 \sigma$ taisyklę \cite{pukelsheimThreeSigmaRule1994}, \ty jei bent vieno požymio įtaka \gls{ml} sprendimo priėmimui nukrypsta per 3 standartinius nuokrypius nuo duotojo požymio vidurkio -- laikyti, jog analizuojama įvestis buvo obfuskuota.
 \end{minipage}
 \hspace{0.02\textwidth}
 \begin{minipage}{0.58\textwidth}
@@ -24,10 +24,10 @@ gauti dar tikslesnį \gls{ae} aptikimo metodą \zr{fig:original}.
 
 \clearpage
 \subsection{\LIME branduolio pločio pasirinkimas}
-\LIME branduolio plotį \skyrius{sec:literature:lime} gali padėti nustatyti duomenų vizualizacijos ar kita duomenų analizė. Tai atlikti nėra sudėtinga, kai požymių vektoriaus dimensija nedidelė arba požymiai yra skaitiniai, tačiau turint kategorinius požymius ir atsižvelgiant į jų kodavimą dvejetainiais vektoriais, parinkti tinkamą \LIME branduolio plotį gali būti sudėtinga. Taikant \gls{mca} transformaciją neretai užtenka branduolio pločio vertę parinkti pagal pirmų dviejų komponenčių skalę, kadangi šios dvi komponentės apibūdina didžiausią inerciją \zr{fig:scree}.
+\LIME branduolio plotį \skyrius{sec:literature:lime} gali padėti nustatyti duomenų vizualizacijos ar kita duomenų analizė. Tai atlikti nėra sudėtinga, kai požymių vektoriaus dimensija nedidelė arba požymiai yra skaitiniai, tačiau turint kategorinius požymius ir atsižvelgiant į jų kodavimą dvejetainiais vektoriais, parinkti tinkamą \LIME branduolio plotį gali būti sudėtinga. Taikant \gls{mca} transformaciją neretai užtenka branduolio pločio vertę parinkti pagal pirmų dviejų komponenčių skalę, kadangi šios dvi komponentės apibūdina didžiausią inerciją. Pavyzdžiui, \ref{fig:scree}-ame pav. vaizduojamu atveju, tinkamos $\omega$ vertės turėtų būti vienetų skalėje (tiksli vertė nustatoma eksperimentiškai).
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.6\textwidth]{images/mca_scatter.png}
+        \includegraphics[width=0.55\textwidth]{images/mca_scatter.png}
         \caption{Pirmųjų dviejų \gls{mca} transformacijos komponenčių pavyzdys}
         \label{fig:scree}
 \end{figure}

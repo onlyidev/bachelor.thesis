@@ -1,6 +1,6 @@
 \subsection{GAN tipo modelių \glspl{framework}}\label{sec:literature:gan}
 
-\gls{gan} modelių karkasai paremti generatyviniais priešiškais tinklais (\gls{gan}), kurių veikimo principas yra du neuroniniai tinklai (generatorius ir diskriminatorius), žaidžiantys \gls{zeroSumGame} \cite{chenInfoGANInterpretableRepresentation2016a}. Kenkėjiško kodo obfuskacijos kontekste ir ypač \enquote{juodos dėžės} atvejais, diskriminatorius atlieka \gls{surrogateModel} vaidmenį. Bendras \gls{gan} modelių mokymosi etapas yra tokia seka \cite{huGeneratingAdversarialMalware2017,zhuNgramMalGANEvading2022,zhongMalFoxCamouflagedAdversarial2024}:
+\gls{gan} modelių karkasai paremti generatyviniais priešiškais tinklais (\gls{gan}), kurių veikimo principas yra du neuroniniai tinklai (generatorius ir diskriminatorius), žaidžiantys \glska{zeroSumGame} \cite{chenInfoGANInterpretableRepresentation2016a}. Kenkėjiško kodo obfuskacijos kontekste ir ypač \enquote{juodos dėžės} atvejais, diskriminatorius atlieka \glsko{surrogateModel} vaidmenį. Bendras \gls{gan} modelių mokymosi etapas yra tokia seka \cite{huGeneratingAdversarialMalware2017,zhuNgramMalGANEvading2022,zhongMalFoxCamouflagedAdversarial2024}:
 \begin{enumerate}
     \item Generatorius, naudodamas požymių vektorių ir tokios pačios dimensijos
           \enquote{triukšmo} \angl{noise} vektorių, sugeneruoja perturbacijas.
@@ -24,7 +24,7 @@
         Daugiasluoksnis tiesioginio sklidimo neuroninis tinklas -- klasifikatorius. Įvestis -- programos požymių vektorius. Išvestis -- klasifikacija į kenksmingą arba nekenksmingą. Šis tinklas taip pat naudojamas kaip diskriminatorius \gls{gan} architektūroje.
     }
     \mainModel{
-        Daugiasluoksnis tiesioginio sklidimo neuroninis tinklas. Įvestis -- programos požymių vektorius ir tokios pačios dimensijos \enquote{triukšmo} vektorius. Išvestis -- modifikuotas požymių vektorius. Šis tinklas naudojamas kaip generatorius \gls{gan} architektūroje.
+        Daugiasluoksnis tiesioginio sklidimo neuroninis tinklas. Įvestis -- programos požymių vektorius su prijungtu \enquote{triukšmo} vektoriumi. Išvestis -- modifikuotas požymių vektorius. Šis tinklas naudojamas kaip generatorius \gls{gan} architektūroje.
     }
     \features{}{
         \textit{MalGan} straipsnyje \cite{huGeneratingAdversarialMalware2017} naudojami tik \gls{api} vardų požymiai, patenkantys į PE formato programų požymių kategoriją (žr. \ref{sec:literature:features:pe}), tačiau autoriai nurodo, jog gali būti naudojami bet kokie požymiai\footnote{\label{footnote:detector-assumptions}autoriai nagrinėja \enquote{juodos dėžės} atvejį su prielaida, jog detektoriaus naudojami požymiai yra žinomi.}.

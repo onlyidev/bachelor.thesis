@@ -3,14 +3,14 @@
 \def\strat{Varžymosi principais pagrįstas pertreniravimas}
 \subsubsection{\strat}\label{sec:literature:defense:retraining}
 
-\strat~\angl{adversarial retraining} -- tai papildomas \gls{ml} modelio treniravimo etapas. Tarkime pradinis ištreniruotas \gls{ml} modelis yra $M_1$. Tuomet \lowercase{\strat} yra \gls{ae} generavimas atakuojant $M_1$ ir šio modelio papildomas treniravimas su sugeneruotais \gls{ae}. Po treniravimo gauname $M_2 \; (M_1 \xrightarrow{AE} M_2)$, kuris bus atsparesnis \glsplkam{adversarial}. Ši strategija nėra atspari \glsplkam{blackBoxAttack} \cite{chakrabortySurveyAdversarialAttacks2021}.
+\strat~\angl{adversarial retraining} -- tai papildomas \gls{ml} modelio treniravimo etapas. Tarkime pradinis ištreniruotas \gls{ml} modelis yra $M_1$. Tuomet \MakeLowercase{\strat} yra \gls{ae} generavimas atakuojant $M_1$ ir šio modelio papildomas treniravimas su sugeneruotais \gls{ae}. Po treniravimo gauname $M_2 \; (M_1 \xrightarrow{AE} M_2)$, kuris bus atsparesnis \glsplkam{adversarial}. Ši strategija nėra atspari \glsplkam{blackBoxAttack} \cite{chakrabortySurveyAdversarialAttacks2021}.
 
 
 
 \def\strat{Gradientų slėpimas}
 \subsubsection{\strat}
 
-\strat~\angl{gradient hiding} -- tai metodas, kai pasirenkama klasifikatoriaus architektūra, kurioje nefigūruoja gradientai, pavyzdžiui, nediferencijuojami modeliai, tokie kaip atsitiktinis miškas \angl{random forest}. Dėl \gls{ae} perkeliamumo \skyrius{sec:literature:transfer}{skyriuje} ši strategija yra neveiksminga prieš \glsplka{blackBoxAttack} \cite{chakrabortySurveyAdversarialAttacks2021}.
+\strat~\angl{gradient hiding} -- tai metodas, kai pasirenkama klasifikatoriaus architektūra, kurioje nefigūruoja gradientai, pavyzdžiui, nediferencijuojami modeliai, tokie kaip atsitiktinis miškas \angl{random forest}. Dėl \gls{ae} perkeliamumo \skyrius{sec:literature:transfer} ši strategija yra neveiksminga prieš \glsplka{blackBoxAttack} \cite{chakrabortySurveyAdversarialAttacks2021}.
 
 
 
