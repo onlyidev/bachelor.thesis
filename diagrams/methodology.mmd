@@ -1,7 +1,11 @@
 ---
 config:
+  themeVariables:
+      fontSize: 24px
   flowchart:
     curve: "basis"
+    nodeSpacing: 30
+    rankSpacing: 30
 ---
 flowchart
 sleipnir[("SLEIPNIR duomenų rinkinys")]
@@ -32,8 +36,8 @@ train --> Tyrimas
 collect --> lime --> exp2 & exp3
 
 subgraph Tyrimas
-    exp1
-    exp4
-    exp2
-    exp3
-    end
+  exp1
+  exp4
+  exp2
+  exp3
+  end
