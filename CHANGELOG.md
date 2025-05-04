@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/onlyidev/bachelor.thesis/compare/v1.0.0...v1.1.0) (2025-05-04)
+
+
+### Features
+
+* **summary:** Add summary LT/EN ([5c422e5](https://github.com/onlyidev/bachelor.thesis/commit/5c422e55f98d0db3c40060cff2398bbd0e2dde59))
+
+
+### Bug Fixes
+
+* **images:** Update font size in images ([864a598](https://github.com/onlyidev/bachelor.thesis/commit/864a5986e7104122c589e20574d586720d0ff01c))
+
 ## [1.0.0](https://github.com/onlyidev/bachelor.thesis/compare/v0.5.0...v1.0.0) (2025-04-28)
 
 
