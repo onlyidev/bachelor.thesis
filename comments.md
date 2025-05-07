@@ -35,9 +35,9 @@ p:has(input[type="checkbox"]:checked){
 ## Detailed comments
  - [x] Page #2: "MCA" -- MCA ne italic, o LIME italic.
 
- - [ ] Page #5 (Terminų žodynas): "Variacijos" -- Gal geriau "variance" versti "dispersija". 
+ - [x] Page #5 (Terminų žodynas): "Variacijos" -- Gal geriau "variance" versti "dispersija". 
 
- - [ ] Page #5 (Terminų žodynas): "komponentė" -- Gale turėtų būti taškas.
+ - [x] Page #5 (Terminų žodynas): "komponentė" -- Gale turėtų būti taškas.
 
  - [ ] Page #5 (Terminų žodynas): "treniravimas" -- Man labiau patinka "mokymas". Mano nuomone "mokymas" yra intelektuali veikla, o "treniravimas" - fizinė. O čia gi dirbtinis intelektas :) Jūs pats nuspręskite.
 
