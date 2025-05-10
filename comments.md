@@ -86,7 +86,7 @@ p:has(input[type="checkbox"]:checked){
 
    visur papildyti
 
- - [ ] Page #26 (3.3. mca komponenčių pasirinkimas): "8 lent.)" -- rašyti pilnai "lentelę"
+ - [x] Page #26 (3.3. mca komponenčių pasirinkimas): "8 lent.)" -- rašyti pilnai "lentelę"
 
  - [ ] Page #26 (3.3. mca komponenčių pasirinkimas): "klasifikatoriaus" -- Ar yra nurodyta, koks klasifikatorius buvo naudotas?
 
