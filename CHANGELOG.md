@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.1.1](https://github.com/onlyidev/bachelor.thesis/compare/v1.1.0...v1.1.1) (2025-05-10)
+
+
+### Bug Fixes
+
+* **abbr:** Remove number endings from abbreviated references ([e72117e](https://github.com/onlyidev/bachelor.thesis/commit/e72117e18080a5f3d6336bfd140fcf507523e7ce))
+* **abbr:** Use full form before DI ([72e959d](https://github.com/onlyidev/bachelor.thesis/commit/72e959dd173396ebe7516f257de27a41fed57f55))
+* **commands:** Adjust skyrius command to include words ([c424a6c](https://github.com/onlyidev/bachelor.thesis/commit/c424a6c30bb413f45d8232aa192539feb763bd69))
+* **commands:** Fix \ty ([1076da8](https://github.com/onlyidev/bachelor.thesis/commit/1076da80094017329455a8bca1108871fbbd07c1))
+* **commands:** Update \zr commands ([598c28a](https://github.com/onlyidev/bachelor.thesis/commit/598c28a8e97ae331fa634801e13e762f2b6691ff))
+* **glossary:** Improve descriptions and variance wording ([9fe9b75](https://github.com/onlyidev/bachelor.thesis/commit/9fe9b7542ab647adea088c846bb6d1dc06cb70e6))
+* **glossary:** Remove dot after description environment ([4bf6213](https://github.com/onlyidev/bachelor.thesis/commit/4bf6213ca1a1ada145a4895a823b90e02fef8ab1))
+* **LIME:** Improved LIME explanation ([d95d08a](https://github.com/onlyidev/bachelor.thesis/commit/d95d08aaae0b69e5fade40e807cdcceaddbccf66))
+* **literature:** Strings -&gt; strings ([ffbdc1c](https://github.com/onlyidev/bachelor.thesis/commit/ffbdc1c623fd549f4d3cf523c940bac9b6f92a88))
+* **method:** Specify author as this work's author ([b39d188](https://github.com/onlyidev/bachelor.thesis/commit/b39d188367dd4f516c4f0d56f2714fb4a43d4ad3))
+* **metrics:** Add missing sentence explaining model evaluation ([d0e68f0](https://github.com/onlyidev/bachelor.thesis/commit/d0e68f0ca7d0bd0d8c8bba8c94c63993e6193c6f))
+* **PCA/MCA:** Move abbr out of section heading ([2ee7f55](https://github.com/onlyidev/bachelor.thesis/commit/2ee7f55f1359d714227f0e3fa6c679cd0431e057))
+* **PCA/MCA:** Variance -&gt; dispersija ([7cf07e7](https://github.com/onlyidev/bachelor.thesis/commit/7cf07e7f1056e3c4bf698b825a0da0561d7bc81c))
+* **percents:** Add space between number and % sign ([e1288c2](https://github.com/onlyidev/bachelor.thesis/commit/e1288c2f43776df9b7ed5f08040860bb974313b2))
+* **purpose:** Specify malware ([512b4b7](https://github.com/onlyidev/bachelor.thesis/commit/512b4b7726b4b05f07b7c860a2e0445a2c8265e8))
+* **references:** Specify what original classifier is ([277d3dd](https://github.com/onlyidev/bachelor.thesis/commit/277d3dd96d39b8e097ba921483163b23e9c156e7))
+* **references:** Use skyrius instead of ref{sec} ([d1928aa](https://github.com/onlyidev/bachelor.thesis/commit/d1928aa85e470a0d41de8c38b1dbcfffb364e03a))
+* **results:** Include numeric results ([b0d69ff](https://github.com/onlyidev/bachelor.thesis/commit/b0d69ffb307b4d8723061d28418461bf00e42685))
+* **summary:** LIME and MCA terms are both italic ([07b4a37](https://github.com/onlyidev/bachelor.thesis/commit/07b4a37550a141d6d7b827a4a7cbfbfbe37cb68f))
+* **tables:** Specified weighted averages vs macro averages ([c5686cd](https://github.com/onlyidev/bachelor.thesis/commit/c5686cdc9932f2c43ff91f0a736d7e285196a4ed))
+* **tasks:** Add LIME to tasks ([82ec7e4](https://github.com/onlyidev/bachelor.thesis/commit/82ec7e42d33f2f92a4e91183f5c8a4e987dede99))
+* **wording:** Use mokymas instead of treniravimas ([b1f6abf](https://github.com/onlyidev/bachelor.thesis/commit/b1f6abf3a71aff03378b4e86229f6295852d1471))
+
 ## [1.1.0](https://github.com/onlyidev/bachelor.thesis/compare/v1.0.0...v1.1.0) (2025-05-04)
 
 
