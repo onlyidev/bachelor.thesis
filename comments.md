@@ -47,7 +47,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [ ] Page #7 (Įvadas): "DI," -- Nepaisanto to, kad DI gerai žinomas trumpinys, siūlau pirmą kartą minint parašyti "dirbtinsi intelektas", kaip yra "mašininis mokymasis". 
 
- - [ ] Page #7 (Įvadas): "požymius." -- Kažkaip reiktų tiksle integruoti "kenkėjišką kodą", nes dabar tikslas labai bendras, jis tiktų ir pvz. užpultiems vaizdams.
+ - [x] Page #7 (Įvadas): "požymius." -- Kažkaip reiktų tiksle integruoti "kenkėjišką kodą", nes dabar tikslas labai bendras, jis tiktų ir pvz. užpultiems vaizdams.
 
  - [ ] Page #7 (Įvadas): "Uždaviniai:" -- Siūlyčiau į uždavinius integruoti LIME. Visi esmininiai tiklso formuluotės žodžiai turi pasikartoti ir uždaviniuose.
 
