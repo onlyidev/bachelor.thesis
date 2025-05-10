@@ -61,7 +61,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "PCA" -- Geriau trumpinio pavadinime nerašyti, o čia parašyti pilną pavadinima ir trumpinį.
 
- - [ ] Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "variacijos," -- dispersijos?
+ - [x] Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "variacijos," -- dispersijos?
 
  - [ ] Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "(1.8.5.)," -- Kadangi numeravimų yra daug, kad būtų aiškų siūlau nurodyti (žr. 1.8.5. skyrelį).
 
