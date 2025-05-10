@@ -1,9 +1,9 @@
-\subsection{\gls{ae} aptikimo strategijos}\label{sec:literature:defense}
+\subsection{\gls*{ae} aptikimo strategijos}\label{sec:literature:defense}
 
-\def\strat{Varžymosi principais pagrįstas pertreniravimas}
-\subsubsection{\strat}\label{sec:literature:defense:retraining}
+\def\strat{\Gls{adverasrialRetraining}}
+\subsubsection{\Gls*{adverasrialRetraining}}\label{sec:literature:defense:retraining}
 
-\strat~\angl{adversarial retraining} -- tai papildomas \gls{ml} modelio treniravimo etapas. Tarkime pradinis ištreniruotas \gls{ml} modelis yra $M_1$. Tuomet \MakeLowercase{\strat} yra \gls{ae} generavimas atakuojant $M_1$ ir šio modelio papildomas treniravimas su sugeneruotais \gls{ae}. Po treniravimo gauname $M_2 \; (M_1 \xrightarrow{AE} M_2)$, kuris bus atsparesnis \glsplkam{adversarial}. Ši strategija nėra atspari \glsplkam{blackBoxAttack} \cite{chakrabortySurveyAdversarialAttacks2021}.
+\strat~\angl{adversarial retraining} -- tai papildomas \gls{ml} modelio mokymo etapas. Tarkime pradinis išmokytas \gls{ml} modelis yra $M_1$. Tuomet \gls{adverasrialRetraining} yra \gls{ae} generavimas atakuojant $M_1$ ir šio modelio papildomas mokymas su sugeneruotais \gls{ae}. Po mokymo gauname $M_2 \; (M_1 \xrightarrow{AE} M_2)$, kuris bus atsparesnis \glsplkam{adversarial}. Ši strategija nėra atspari \glsplkam{blackBoxAttack} \cite{chakrabortySurveyAdversarialAttacks2021}.
 
 
 
@@ -24,11 +24,11 @@
 \def\strat{Perkeliamumo blokavimas}
 \subsubsection{\strat}\label{sec:literature:defense:blocking}
 
-\strat~\angl{transferability blocking} -- tai varžymosi principais pagrįsto pertreniravimo \skyrius{sec:literature:defense:retraining} praplėtimas, įtraukiant naują (\textit{NULL}) kategoriją į galimas klasifikatoriaus išvestis. Ši strategija praplečia klasifikatoriaus treniravimą į šiuos etapus:
+\strat~\angl{transferability blocking} -- tai \glsko{adverasrialRetraining} \skyrius{sec:literature:defense:retraining} praplėtimas, įtraukiant naują (\textit{NULL}) kategoriją į galimas klasifikatoriaus išvestis. Ši strategija praplečia klasifikatoriaus mokymą į šiuos etapus:
 \begin{enumerate}
-    \item Įprastas klasifikatoriaus treniravimas.
+    \item Įprastas klasifikatoriaus mokymas.
     \item \textit{NULL} tikimybių funkcijos $f$ skaičiavimas. $p_{NULL}$ suprantama kaip \glsko{adversarial} tikimybė. \textit{NULL} tikimybių ir jų skaičiavimo funkcijos $f$ ryšys pateiktas \ref{eq:null}-oje lygtyje.
-    \item Varžymosi principais pagrįstas pertreniravimas, įtraukiant tiek originalias įvestis, tiek perturbuotas ($\delta X$).
+    \item \Gls{adverasrialRetraining}, įtraukiant tiek originalias įvestis, tiek perturbuotas ($\delta X$).
 \end{enumerate}
 
 Ši strategija sprendžia pagrindinį daugelio kitų strategijų trūkumą -- \gls{ae} perkeliamumą \skyrius{sec:literature:transfer}, todėl yra pakankamai efektyvi \cite{chakrabortySurveyAdversarialAttacks2021}.

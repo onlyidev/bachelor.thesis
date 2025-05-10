@@ -29,7 +29,7 @@ p:has(input[type="checkbox"]:checked){
 </style>
 
 ## Highlights
- - [ ] Page #7 (Įvadas): "treniravimas,"
+ - [x] Page #7 (Įvadas): "treniravimas,"
 
 
 ## Detailed comments
@@ -39,7 +39,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] Page #5 (Terminų žodynas): "komponentė" -- Gale turėtų būti taškas.
 
- - [ ] Page #5 (Terminų žodynas): "treniravimas" -- Man labiau patinka "mokymas". Mano nuomone "mokymas" yra intelektuali veikla, o "treniravimas" - fizinė. O čia gi dirbtinis intelektas :) Jūs pats nuspręskite.
+ - [x] Page #5 (Terminų žodynas): "treniravimas" -- Man labiau patinka "mokymas". Mano nuomone "mokymas" yra intelektuali veikla, o "treniravimas" - fizinė. O čia gi dirbtinis intelektas :) Jūs pats nuspręskite.
 
  - [x] Page #6 (Įvadas): "." -- Čia labiau tiktų brūkšnys nei taškas. Bet jei techniškai tai sudėtingiau padaryti, gali likti ir taip.
 
