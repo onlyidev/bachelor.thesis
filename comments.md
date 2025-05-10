@@ -55,7 +55,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] Page #11 (1.2.3. Kompleksinės perturbacijos): "1­ame pav." -- Reiktų arba "1-ame paveiksle", arba "1 pav."
 
- - [x] Page #19 (1.9. lime metodas): "kaip ML modelis žymiai mažesnėje – loka­ lioje – srityje" -- Sakyčiau, čia kažko trūksta, sakinys be pabaigos.
+ - [x] ⚠️Page #19 (1.9. lime metodas): "kaip ML modelis žymiai mažesnėje – loka­ lioje – srityje" -- Sakyčiau, čia kažko trūksta, sakinys be pabaigos.
 
  - [x] Page #20 (1.9.1. adversarial aptikimas ids naudojant lime ): "Mokomas" -- Čia vietoj "treniravimo" yra "mokymas". Puiku.
 
@@ -63,7 +63,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "variacijos," -- dispersijos?
 
- - [ ] Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "(1.8.5.)," -- Kadangi numeravimų yra daug, kad būtų aiškų siūlau nurodyti (žr. 1.8.5. skyrelį).
+ - [x] ⚠️Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "(1.8.5.)," -- Kadangi numeravimų yra daug, kad būtų aiškų siūlau nurodyti (žr. 1.8.5. skyrelį).
 
  - [ ] Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "50%," -- Lietuvių kalboje tarp skaičiaus ir procento ženklo turi būti tarpas.
 
