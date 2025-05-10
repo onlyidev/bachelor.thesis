@@ -90,7 +90,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] Page #26 (3.3. mca komponenčių pasirinkimas): "klasifikatoriaus" -- Ar yra nurodyta, koks klasifikatorius buvo naudotas?
 
- - [ ] Page #26 (3.3. mca komponenčių pasirinkimas):
+ - [x] Page #26 (3.3. mca komponenčių pasirinkimas):
    > / Svertinis vidurkis
 
    Siūlau čia nerašyti, pakaks paskutinėje eilutėje.

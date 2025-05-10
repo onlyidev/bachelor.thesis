@@ -5,14 +5,15 @@ eksperimentui susideda iš 300 kenkėjiškų ir 300 nekenkėjiškų programų po
 Taip pat pridedami dar 300 obfuskuotų programų požymių (jie gaunami naudojant
 jau turimus kenkėjiškų programų požymius ir išmokytą \MALGAN modelį).
 
-Kadangi originalus\footnotemark~klasifikatorius negali diferencijuoti obfuskuotų programų,
-turima duomenų aibė nėra subalansuota -- turime dvigubai daugiau duomenų,
-kuriuos klasifikatorius turėtų klasifikuoti kaip kenkėjiškus. Dėl to,
-klasifikacijos lentelėje \zr{fig:exp1:confusion} rodomas prognozuojamos klasės
-ir visų tai klasei priklausančių duomenų santykis (tokios matricos pagrindinė
-diagonalė nurodo klasės atkūrimo statistiką \angl{recall}).
+Kadangi originalus\footnotemark~klasifikatorius negali diferencijuoti
+obfuskuotų programų, turima duomenų aibė nėra subalansuota -- turime dvigubai
+daugiau duomenų, kuriuos klasifikatorius turėtų klasifikuoti kaip kenkėjiškus.
+Dėl to, klasifikacijos lentelėje \zr{fig:exp1:confusion} rodomas prognozuojamos
+klasės ir visų tai klasei priklausančių duomenų santykis (tokios matricos
+pagrindinė diagonalė nurodo klasės atkūrimo statistiką \angl{recall}).
 
-Eksperimento rezultatai (klasifikavimo metrikos) pateikiami \ref{tbl:exp1:metrics}-oje lentelėje.
+Eksperimento rezultatai (klasifikavimo metrikos) pateikiami
+\ref{tbl:exp1:metrics}-oje lentelėje, bendros metrikos dėl nesubalansuotų klasių skaičiuojamos kaip svertinis vidurkis.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{images/normal_2x2.png}

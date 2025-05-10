@@ -2,7 +2,7 @@
 
 \newcommand{\exptable}[2][0]{
     \begin{tabular}{l|c|c|c}%
-        \bfseries Klasė / Svertinis vidurkis & \bfseries Preciziškumas & \bfseries Atkūrimas & \bfseries F1
+        \bfseries Klasė & \bfseries Preciziškumas & \bfseries Atkūrimas & \bfseries F1
         \csvreader{#2}{}
         {
         \\\hline\csvcoli & \num{\csvcolii} & \num{\csvcoliii} & \num{\csvcoliv}
