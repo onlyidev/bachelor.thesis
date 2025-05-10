@@ -45,7 +45,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [ ] Page #6 (Įvadas): ")" -- Pabaigoje man norėtųsi taško.
 
- - [ ] Page #7 (Įvadas): "DI," -- Nepaisanto to, kad DI gerai žinomas trumpinys, siūlau pirmą kartą minint parašyti "dirbtinsi intelektas", kaip yra "mašininis mokymasis". 
+ - [x] Page #7 (Įvadas): "DI," -- Nepaisanto to, kad DI gerai žinomas trumpinys, siūlau pirmą kartą minint parašyti "dirbtinsi intelektas", kaip yra "mašininis mokymasis". 
 
  - [x] Page #7 (Įvadas): "požymius." -- Kažkaip reiktų tiksle integruoti "kenkėjišką kodą", nes dabar tikslas labai bendras, jis tiktų ir pvz. užpultiems vaizdams.
 
