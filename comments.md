@@ -99,7 +99,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] Page #26 (3.3. mca komponenčių pasirinkimas): "Preciziškumas" -- Reiktų pagrindiniame teskte nurodyti, kad klasifikavimo į dvi klases kokybė bus matuojama taikant preciziškumo (ang. precision), atkūrimo (angl. recall) ir F1 metrikas bei vertinimas bendras tikslumas (angl. accuracy).
 
- - [ ] Page #31 (4. Rezultatai ir išvados): "Apžvelgti" -- Siūlyčiau pirma surašyti tekstą punktais, prieš tai reikia trumpo sakinuko, kaip pvz, "Atlikus tyrimą, gauti rezultatai:". O skyriau pabaigoje pateikti 16 lentelę. Įprastai skyriai nėra pradedami paveikslais ar lentelėmis.
+ - [x] Page #31 (4. Rezultatai ir išvados): "Apžvelgti" -- Siūlyčiau pirma surašyti tekstą punktais, prieš tai reikia trumpo sakinuko, kaip pvz, "Atlikus tyrimą, gauti rezultatai:". O skyriau pabaigoje pateikti 16 lentelę. Įprastai skyriai nėra pradedami paveikslais ar lentelėmis.
 
- - [ ] Page #31 (4. Rezultatai ir išvados): "didžiausią tikslumą" -- siūlau ji nurodyti
+ - [x] Page #31 (4. Rezultatai ir išvados): "didžiausią tikslumą" -- siūlau ji nurodyti
 
