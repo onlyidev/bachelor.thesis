@@ -57,9 +57,9 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] Page #19 (1.9. lime metodas): "kaip ML modelis žymiai mažesnėje – loka­ lioje – srityje" -- Sakyčiau, čia kažko trūksta, sakinys be pabaigos.
 
- - [ ] Page #20 (1.9.1. adversarial aptikimas ids naudojant lime ): "Mokomas" -- Čia vietoj "treniravimo" yra "mokymas". Puiku.
+ - [x] Page #20 (1.9.1. adversarial aptikimas ids naudojant lime ): "Mokomas" -- Čia vietoj "treniravimo" yra "mokymas". Puiku.
 
- - [ ] Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "PCA" -- Geriau trumpinio pavadinime nerašyti, o čia parašyti pilną pavadinima ir trumpinį.
+ - [x] Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "PCA" -- Geriau trumpinio pavadinime nerašyti, o čia parašyti pilną pavadinima ir trumpinį.
 
  - [ ] Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "variacijos," -- dispersijos?
 
