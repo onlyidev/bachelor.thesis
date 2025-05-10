@@ -49,7 +49,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] Page #7 (Įvadas): "požymius." -- Kažkaip reiktų tiksle integruoti "kenkėjišką kodą", nes dabar tikslas labai bendras, jis tiktų ir pvz. užpultiems vaizdams.
 
- - [ ] Page #7 (Įvadas): "Uždaviniai:" -- Siūlyčiau į uždavinius integruoti LIME. Visi esmininiai tiklso formuluotės žodžiai turi pasikartoti ir uždaviniuose.
+ - [x] Page #7 (Įvadas): "Uždaviniai:" -- Siūlyčiau į uždavinius integruoti LIME. Visi esmininiai tiklso formuluotės žodžiai turi pasikartoti ir uždaviniuose.
 
  - [ ] Page #8 (1.1.2. Baitų lygio požymiai): "Strings" -- strings
 
