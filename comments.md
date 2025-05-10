@@ -65,7 +65,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] ⚠️Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "(1.8.5.)," -- Kadangi numeravimų yra daug, kad būtų aiškų siūlau nurodyti (žr. 1.8.5. skyrelį).
 
- - [ ] Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "50%," -- Lietuvių kalboje tarp skaičiaus ir procento ženklo turi būti tarpas.
+ - [x] Page #21 (1.10.1. Principinių komponenčių analizė (pca)): "50%," -- Lietuvių kalboje tarp skaičiaus ir procento ženklo turi būti tarpas.
 
  - [ ] Page #22 (2. mca ir lime ae aptikimo metodų sintezė): "Autoriaus" -- Gal "Šio darbo autoriaus", kad būtų aiškų, kad čia Jūsų darbas.
 

@@ -42,14 +42,14 @@ Tyrimui pasirinktas \refFramework{MalGAN} \gls{framework} dėl šių priežasči
 
 \clearpage
 \subsection{\gls{mca} komponenčių pasirinkimas}\label{sec:method:mca_comp_selection}
-Komponenčių pasirinkimas yra \ref{fig:methodology} pav. minimo \gls{mca} modelio paruošimo dalis. Komponenčių pasirinkimui \ty jų kiekio pasirinkimui nėra apibrėžto \enquote{teisingo} metodo \cite{abdiPrincipalComponentAnalysis2010}. Dažniausiai siūlomi metodai yra tik didesnių už $1$ tikrinių reikšmių pasirinkimas ir \textit{alkūnės} \angl{scree / elbow} metodas. Šie metodai netiko, nes juos taikant paliktos \gls{mca} komponentės nepaaiškintų net pusės visos \glsko{inertia}: visos tikrinės reikšmės analizuojamuose mokymo duomenyse yra $<1$, o alkūnės taške sukaupta \gls{inertia} yra $\num{47,62} \%$ \zr{fig:inertia}. Taigi, pasirinkti 2 nestandartiniai \gls{mca} komponenčių kiekio kriterijai: 
+Komponenčių pasirinkimas yra \ref{fig:methodology} pav. minimo \gls{mca} modelio paruošimo dalis. Komponenčių pasirinkimui \ty jų kiekio pasirinkimui nėra apibrėžto \enquote{teisingo} metodo \cite{abdiPrincipalComponentAnalysis2010}. Dažniausiai siūlomi metodai yra tik didesnių už $1$ tikrinių reikšmių pasirinkimas ir \textit{alkūnės} \angl{scree / elbow} metodas. Šie metodai netiko, nes juos taikant paliktos \gls{mca} komponentės nepaaiškintų net pusės visos \glsko{inertia}: visos tikrinės reikšmės analizuojamuose mokymo duomenyse yra $<1$, o alkūnės taške sukaupta \gls{inertia} yra $\num{47,62}\;\%$ \zr{fig:inertia}. Taigi, pasirinkti 2 nestandartiniai \gls{mca} komponenčių kiekio kriterijai: 
 
 \noindent
 \begin{minipage}[l]{0.48\textwidth}
     \vspace{-2cm}
     \begin{itemize}[leftmargin=*]
-        \item sukaupta \gls{inertia} $\ge 75\%$,
-        \item išmokyto klasifikatoriaus tikslumas $\hat{a}$ nemažesnis nei originalaus klasifikatoriaus tikslumas $a$ $5\%$ intervale ($\hat{a} \ge a - 5\%$), kai įvesčių srautas normalus (nėra obfuskuotų programų požymių -- \gls{ae}). Šiuo atveju $\hat{a} \ge \num{\mathOp{\accNoAttackNormal - 0.05}}$ \Zr{tbl:safe:original:metrics}
+        \item sukaupta \gls{inertia} $\ge 75\;\%$,
+        \item išmokyto klasifikatoriaus tikslumas $\hat{a}$ nemažesnis nei originalaus klasifikatoriaus tikslumas $a$ $5\;\%$ intervale ($\hat{a} \ge a - 5\;\%$), kai įvesčių srautas normalus (nėra obfuskuotų programų požymių -- \gls{ae}). Šiuo atveju $\hat{a} \ge \num{\mathOp{\accNoAttackNormal - 0.05}}$ \Zr{tbl:safe:original:metrics}
     \end{itemize}
 \end{minipage}
 \hspace{0.02\textwidth}
@@ -74,9 +74,9 @@ Komponenčių pasirinkimas yra \ref{fig:methodology} pav. minimo \gls{mca} model
     \label{tbl:safe:mca:metrics}
 \end{table}
 
-\def\accumulatedInertia{$78,57\%$}
+\def\accumulatedInertia{$78,57\;\%$}
 
-\ref{tbl:safe:mca:metrics}-oje lentelėje pavaizduotos \gls{mca} transformacijos klasifikatoriaus metrikos gaunamos pasirinkus 50 komponenčių (suspaudimo santykis $4:1$), kurių sukaupta \gls{inertia} yra \accumulatedInertia. Kadangi \accumulatedInertia $\;> 75\%$ ir $\num{\accNoAttackMca} > \num{\mathOp{\accNoAttackNormal - 0.05}}$, abu \gls{mca} komponenčių kiekio kriterijai yra tenkinami.
+\ref{tbl:safe:mca:metrics}-oje lentelėje pavaizduotos \gls{mca} transformacijos klasifikatoriaus metrikos gaunamos pasirinkus 50 komponenčių (suspaudimo santykis $4:1$), kurių sukaupta \gls{inertia} yra \accumulatedInertia. Kadangi \accumulatedInertia $\;> 75\;\%$ ir $\num{\accNoAttackMca} > \num{\mathOp{\accNoAttackNormal - 0.05}}$, abu \gls{mca} komponenčių kiekio kriterijai yra tenkinami.
 
 % --- PCA/MCA
 % Show graphs of 2 best components (~30% of inertia)
