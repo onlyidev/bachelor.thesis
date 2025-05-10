@@ -69,17 +69,17 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] Page #22 (2. mca ir lime ae aptikimo metodų sintezė): "Autoriaus" -- Gal "Šio darbo autoriaus", kad būtų aiškų, kad čia Jūsų darbas.
 
- - [ ] Page #22 (2. mca ir lime ae aptikimo metodų sintezė):
+ - [x] Page #22 (2. mca ir lime ae aptikimo metodų sintezė):
    > žr. 3 pav.).
 
    Kad žr. neliktų kitoje eilutėje, siūlau nurodyti nepertraukiamą tarpą, LaTex'e tai ~.
 
- - [ ] Page #22 (2.1. lime pritaikymo ae aptikimui metodo modifikacijos):
+ - [x] Page #22 (2.1. lime pritaikymo ae aptikimui metodo modifikacijos):
    > t. y.
 
    t. y.,
 
- - [ ] Page #24 (3.1. Tyrimo metodika):
+ - [x] ⚠️Page #24 (3.1. Tyrimo metodika):
    > (2.).
 
    2. skyriuje
