@@ -53,7 +53,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] Page #8 (1.1.2. Baitų lygio požymiai): "Strings" -- strings
 
- - [ ] Page #11 (1.2.3. Kompleksinės perturbacijos): "1­ame pav." -- Reiktų arba "1-ame paveiksle", arba "1 pav."
+ - [x] Page #11 (1.2.3. Kompleksinės perturbacijos): "1­ame pav." -- Reiktų arba "1-ame paveiksle", arba "1 pav."
 
  - [ ] Page #19 (1.9. lime metodas): "kaip ML modelis žymiai mažesnėje – loka­ lioje – srityje" -- Sakyčiau, čia kažko trūksta, sakinys be pabaigos.
 
