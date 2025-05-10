@@ -51,7 +51,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] Page #7 (Įvadas): "Uždaviniai:" -- Siūlyčiau į uždavinius integruoti LIME. Visi esmininiai tiklso formuluotės žodžiai turi pasikartoti ir uždaviniuose.
 
- - [ ] Page #8 (1.1.2. Baitų lygio požymiai): "Strings" -- strings
+ - [x] Page #8 (1.1.2. Baitų lygio požymiai): "Strings" -- strings
 
  - [ ] Page #11 (1.2.3. Kompleksinės perturbacijos): "1­ame pav." -- Reiktų arba "1-ame paveiksle", arba "1 pav."
 
