@@ -4,12 +4,12 @@
 ```mermaid
 kanban
 todo["Todo"]
+done["Done"]
 review["To review"]
  PCA/MCA
  strats["Defense strategies"]
  Lime
  IDS
-done["Done"]
 ```
 
 ## Experiments Kanban
@@ -18,6 +18,7 @@ kanban
 todo["Todo"]
 
 review["To review"]
+done["Done"]
  Original
  Methodology
  Normal
@@ -26,7 +27,6 @@ review["To review"]
  Results
  Implications
  
-done["Done"]
 ```
 ## Improvements Kanban
 ```mermaid
