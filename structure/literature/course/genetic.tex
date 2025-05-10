@@ -24,13 +24,13 @@ Genetinai algoritmai (\gls{genetic}) yra viena seniausių mašininio mokymosi
     \surrogate{Surogatinis modelis nenaudojamas. Naudojami \enquote{juodos dėžės} detektoriai yra \textbf{3 komerciniai} (\textit{Kaspersky, ESET, Sophos}) ir vienas \gls{ml} modelis -- \gls{gbdt}.}
     \mainModel{Klasikinis \gls{genetic} modelis -- veikimas visiškai atitinką bendrą seką. Tinkamumo \angl{fitness} vertinamas remiasi \gls{ae} požymių vektoriaus panašumu į originalios programos požymių vektorių (kuo mažiau panašūs, tuo tinkamumo įvertinimas didesnis).}
     \features{}{
-        Baitų lygio požymiai (\ref{sec:literature:features:byte}) -- atskiras $n$-gramų
+        Baitų lygio požymiai \skyrius{sec:literature:features:byte} -- atskiras $n$-gramų
         atvejis, kai $n=1$.
     }
     \perturbations{}{ Baitų lygio
         perturbacijos\footnote{autoriai rėmėsi perturbacijomis, aprašytomis
             \cite{andersonLearningEvadeStatic2018}}
-        (\ref{sec:literature:perturbations:byte}). 
+        \skyrius{sec:literature:perturbations:byte}. 
     }
 \end{describeFramework}
 
@@ -41,16 +41,16 @@ Genetinai algoritmai (\gls{genetic}) yra viena seniausių mašininio mokymosi
     \mainModel{Pagrindinė modelio idėja yra požymių ištraukimas iš nekenksmingų programų ir jų pridėjimas, naudojant tam pritaikytas perturbacijas, į kenksmingas programas kiekvienos populiacijos generavimo metu. Tinkamumo \angl{fitness} ir kriterijų vertinimas atliekamas naudojant detektorių ir pridėtų požymių dydį baitais (norima pridėti kuo mažiau požymių).}
     \features{}{
         \begin{itemize}
-            \item \gls{pe} formato programų požymiai (\ref{sec:literature:features:pe}).
+            \item \gls{pe} formato programų požymiai \skyrius{sec:literature:features:pe}.
             \item Kodas sekcijose (nestandartinis požymis).
         \end{itemize}
     }
     \perturbations{}{
         \begin{itemize}
-            \item Visos baitų lygio perturbacijos (\ref{sec:literature:perturbations:byte}),
+            \item Visos baitų lygio perturbacijos \skyrius{sec:literature:perturbations:byte},
                   gebančios pridėti baitus.
             \item Autoriai pažymi, jog gali būti naudojama ir \gls{dll} / \gls{api} vardų
-                  pridėjimo semantinė perturbacija (\ref{sec:literature:perturbations:semantic}).
+                  pridėjimo semantinė perturbacija \skyrius{sec:literature:perturbations:semantic}.
         \end{itemize}
     }
 \end{describeFramework}
