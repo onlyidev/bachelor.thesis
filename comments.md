@@ -88,7 +88,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] Page #26 (3.3. mca komponenčių pasirinkimas): "8 lent.)" -- rašyti pilnai "lentelę"
 
- - [ ] Page #26 (3.3. mca komponenčių pasirinkimas): "klasifikatoriaus" -- Ar yra nurodyta, koks klasifikatorius buvo naudotas?
+ - [x] Page #26 (3.3. mca komponenčių pasirinkimas): "klasifikatoriaus" -- Ar yra nurodyta, koks klasifikatorius buvo naudotas?
 
  - [ ] Page #26 (3.3. mca komponenčių pasirinkimas):
    > / Svertinis vidurkis
