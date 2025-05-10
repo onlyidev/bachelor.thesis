@@ -55,7 +55,7 @@ p:has(input[type="checkbox"]:checked){
 
  - [x] Page #11 (1.2.3. Kompleksinės perturbacijos): "1­ame pav." -- Reiktų arba "1-ame paveiksle", arba "1 pav."
 
- - [ ] Page #19 (1.9. lime metodas): "kaip ML modelis žymiai mažesnėje – loka­ lioje – srityje" -- Sakyčiau, čia kažko trūksta, sakinys be pabaigos.
+ - [x] Page #19 (1.9. lime metodas): "kaip ML modelis žymiai mažesnėje – loka­ lioje – srityje" -- Sakyčiau, čia kažko trūksta, sakinys be pabaigos.
 
  - [ ] Page #20 (1.9.1. adversarial aptikimas ids naudojant lime ): "Mokomas" -- Čia vietoj "treniravimo" yra "mokymas". Puiku.
 
