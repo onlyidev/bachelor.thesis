@@ -1,5 +1,9 @@
 \renewcommand{\acronymname}{Santrumpos}
-\setabbreviationstyle{short-long}
+\renewcommand*{\glsxtrpostdescacronym}{.}
+
+\glsdefpostname{general}{.}
+\glsdefpostname{acronym}{ --}
+% \glssetcategoryattribute{acronym}{glossdesc}{firstuc}
 \makenoidxglossaries
 
 \glsaddkey
@@ -92,4 +96,3 @@
 {\Glsplkur}% link ucfirst cs
 {\GLSplkur}% link all caps cs
 
-\setabbreviationstyle{long-short}

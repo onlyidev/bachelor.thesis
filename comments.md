@@ -41,9 +41,9 @@ p:has(input[type="checkbox"]:checked){
 
  - [ ] Page #5 (Terminų žodynas): "treniravimas" -- Man labiau patinka "mokymas". Mano nuomone "mokymas" yra intelektuali veikla, o "treniravimas" - fizinė. O čia gi dirbtinis intelektas :) Jūs pats nuspręskite.
 
- - [ ] Page #6 (Įvadas): "." -- Čia labiau tiktų brūkšnys nei taškas. Bet jei techniškai tai sudėtingiau padaryti, gali likti ir taip.
+ - [x] Page #6 (Įvadas): "." -- Čia labiau tiktų brūkšnys nei taškas. Bet jei techniškai tai sudėtingiau padaryti, gali likti ir taip.
 
- - [ ] Page #6 (Įvadas): ")" -- Pabaigoje man norėtųsi taško.
+ - [x] Page #6 (Įvadas): ")" -- Pabaigoje man norėtųsi taško.
 
  - [x] Page #7 (Įvadas): "DI," -- Nepaisanto to, kad DI gerai žinomas trumpinys, siūlau pirmą kartą minint parašyti "dirbtinsi intelektas", kaip yra "mašininis mokymasis". 
 

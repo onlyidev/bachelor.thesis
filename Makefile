@@ -16,7 +16,7 @@ pdf:
 
 .PHONY: watch
 watch: pdf
-	latexmk $(LATEXMK_BASE_FLAGS) -interaction=nonstopmode -pvc -view=none $(TEX_NAME) 
+	latexmk $(LATEXMK_BASE_FLAGS) -interaction=nonstopmode -silent -pvc -view=none $(TEX_NAME) 
 
 .PHONY: ubuntu
 ubuntu:
