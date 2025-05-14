@@ -30,13 +30,13 @@ yra tokia seka \cite{fangEvadingMalwareEngines2019,
     \surrogate{\gls{rl} karkasuose nenaudojami surogatiniai modeliai. Kaip \enquote{juodos dėžės} detektorius pasirinktas \gls{gbdt} modelis.}
     \mainModel{Agentas įgyvendintas kaip gilusis $Q$-tinklas (\gls{cnn} praplėtimas, kai tinklas naudojamas kaip \glsko{qfunction} aproksimacija). Taip pat taikomas prioritetizuotas patirčių pakartojimo metodas \angl{prioritized experience replay}, kuomet agentas mokomas tik su aukštą atlygį gavusiais perėjimais ($S \times A$).}
     \features{Požymių vektorius taip pat apibrėžia visų būsenų erdvę $S$. Šiuo atveju $S = \mathbb{R}^{513}$.}{
-        Baitų lygio požymiai \skyrius{sec:literature:features:byte} -- baitų/entropijos
+        Baitų lygio požymiai \skyrelis{sec:literature:features:byte} -- baitų/entropijos
         histograma. 
     }
 
     \perturbations{Perturbacijos apibrėžia visų galimų agento veiksmų
         erdvę $A$. Šiuo atveju $A = \set{0,1}^4$.}{
-        Baitų lygio perturbacijos \skyrius{sec:literature:perturbations:byte}:
+        Baitų lygio perturbacijos \skyrelis{sec:literature:perturbations:byte}:
         \begin{itemize}
             \item \textit{ARBE}
             \item \textit{ARI}
@@ -61,7 +61,7 @@ yra tokia seka \cite{fangEvadingMalwareEngines2019,
     \perturbations{$A = \set{0,1,2,3}$}{
         \begin{itemize}
             \item \textit{Null} perturbacija -- naudinga tik formaliam pilnumui (atitinka nulinį $A$ veiksmą).
-            \item Visos kompleksinės perturbacijos \skyrius{sec:literature:perturbations:complex},
+            \item Visos kompleksinės perturbacijos \skyrelis{sec:literature:perturbations:complex},
                   t.~y. tokios pačios, kaip ir \refFramework{MalFox} \glsko{framework}. 
         \end{itemize}
     }

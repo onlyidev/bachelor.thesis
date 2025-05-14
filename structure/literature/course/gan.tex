@@ -27,10 +27,10 @@
         Daugiasluoksnis tiesioginio sklidimo neuroninis tinklas. Įvestis -- programos požymių vektorius su prijungtu \enquote{triukšmo} vektoriumi. Išvestis -- modifikuotas požymių vektorius. Šis tinklas naudojamas kaip generatorius \gls{gan} architektūroje.
     }
     \features{}{
-        \textit{MalGan} straipsnyje \cite{huGeneratingAdversarialMalware2017} naudojami tik \gls{api} vardų požymiai, patenkantys į PE formato programų požymių kategoriją \skyrius{sec:literature:features:pe}, tačiau autoriai nurodo, jog gali būti naudojami bet kokie požymiai\footnote{\label{footnote:detector-assumptions}autoriai nagrinėja \enquote{juodos dėžės} atvejį su prielaida, jog detektoriaus naudojami požymiai yra žinomi.}.
+        \textit{MalGan} straipsnyje \cite{huGeneratingAdversarialMalware2017} naudojami tik \gls{api} vardų požymiai, patenkantys į PE formato programų požymių kategoriją \skyrelis{sec:literature:features:pe}, tačiau autoriai nurodo, jog gali būti naudojami bet kokie požymiai\footnote{\label{footnote:detector-assumptions}autoriai nagrinėja \enquote{juodos dėžės} atvejį su prielaida, jog detektoriaus naudojami požymiai yra žinomi.}.
     }
     \perturbations{}{
-        Semantinės perturbacijos \skyrius{sec:literature:perturbations:semantic} --
+        Semantinės perturbacijos \skyrelis{sec:literature:perturbations:semantic} --
         nereikalingų \gls{api} vardų požymių pridėjimas.
     }
 \end{describeFramework}
@@ -49,7 +49,7 @@
         Pagrindinio modelio veikimas ir architektūra labai panašūs į \refFramework{MalGAN}, tačiau norėdami stabilizuoti mokymosi procesą, autoriai siūlo nenaudoti \enquote{triukšmo} vektoriaus. Vietoje to, generatoriaus išvestis ($n$-matis vektorius) modifikuojama nekeičiant pirmų $m$ dimensijų, o kitas $n-m$ pakeičiant nekenksmingų programų požymiais.
     }
     \features{}{
-        Baitų lygio požymiai \skyrius{sec:literature:features:byte} -- $n$-gramos.
+        Baitų lygio požymiai \skyrelis{sec:literature:features:byte} -- $n$-gramos.
     }
     \perturbations{Autoriai neatliko eksperimentų su perturbuotomis programomis,
         tačiau pažymi, jog norint gauti sugeneruotus požymių vektorius užtenka pridėti
@@ -68,10 +68,10 @@
     \surrogate{Surogatinis modelis, kaip ir kituose \gls{gan} tipo modelių karkasuose, naudojamas kaip diskriminatorius. Įvestis -- perturbuota programa. Išvestis -- klasifikacija į kenksmingą arba nekenksmingą. Įgyvendinimas -- konvoliucinis neuroninis tinklas (\gls{cnn}).}
     \mainModel{Standartinis \gls{gan} generatorius, požymių vektorių sujungiantis su \enquote{triukšmo} vektoriumi. Įgyvendinimas -- konvoliucinis neuroninis tinklas (\gls{cnn}).}
     \features{}{
-        PE formato programų požymiai \skyrius{sec:literature:features:pe} -- \gls{dll}
+        PE formato programų požymiai \skyrelis{sec:literature:features:pe} -- \gls{dll}
         vardai. 
     }
     \perturbations{}{
-        Visos kompleksinės perturbacijos \skyrius{sec:literature:perturbations:complex}.
+        Visos kompleksinės perturbacijos \skyrelis{sec:literature:perturbations:complex}.
     }
 \end{describeFramework}
