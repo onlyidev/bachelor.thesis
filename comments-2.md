@@ -28,12 +28,12 @@ p:has(input[type="checkbox"]:checked){
 
 </style>
 ## Detailed comments
- - [ ] Page #5 (Terminų žodynas):
+ - [x] Page #5 (Terminų žodynas):
    > (angl. Inertia).
 
    Čia ir kitur tokiose vietose, skliausteliai turi būti ne kursyvu (kaip yra 1.2.1. skyrelyje), o tekstas, kaip ir yra, kursyvu.
 
- - [ ] Page #27 (3.4.1. Originalaus klasifikatoriaus tikslumo nustatymas): "Klasifikavimo" -- Čia "klasifikavimo", virš lentelės "klasifikacijos". Reiktų suvienodinti, siūlau "klasifikavimo".
+ - [x] Page #27 (3.4.1. Originalaus klasifikatoriaus tikslumo nustatymas): "Klasifikavimo" -- Čia "klasifikavimo", virš lentelės "klasifikacijos". Reiktų suvienodinti, siūlau "klasifikavimo".
 
  - [ ] Page #31 (4. Rezultatai ir išvados):
    > (žr. 1. skyrelį).
