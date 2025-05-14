@@ -2,7 +2,7 @@
 
 Šio darbo autoriaus siūlomas \gls{ae} aptikimo metodas yra apjungti \gls{mca} dimensijų
 mažinimo metodą bei \LIME pritaikymą \gls{ae} aptikimui su tam tikromis
-modifikacijomis \skyrius{sec:method:mods}. Kadangi \gls{mca} ir \LIME atitinka
+modifikacijomis \poskyris{sec:method:mods}. Kadangi \gls{mca} ir \LIME atitinka
 bazės keitimo \skyrius{sec:literature:defense:basis} ir perkeliamumo
 blokavimo \skyrius{sec:literature:defense:blocking} \gls{ae} aptikimo
 strategijas, kurios iš aptartų yra perspektyviausios -- jų sinteze tikimasi
@@ -24,7 +24,7 @@ gauti dar tikslesnį \gls{ae} aptikimo metodą \zr{fig:original}.
 
 \clearpage
 \subsection{\LIME branduolio pločio pasirinkimas}
-\LIME branduolio plotį \skyrius{sec:literature:lime} gali padėti nustatyti duomenų vizualizacijos ar kita duomenų analizė. Tai atlikti nėra sudėtinga, kai požymių vektoriaus dimensija nedidelė arba požymiai yra skaitiniai, tačiau turint kategorinius požymius ir atsižvelgiant į jų kodavimą dvejetainiais vektoriais, parinkti tinkamą \LIME branduolio plotį gali būti sudėtinga. Taikant \gls{mca} transformaciją neretai užtenka branduolio pločio vertę parinkti pagal pirmų dviejų komponenčių skalę, kadangi šios dvi komponentės apibūdina didžiausią inerciją. Pavyzdžiui, \ref{fig:scree} pav. vaizduojamu atveju, tinkamos $\omega$ vertės turėtų būti vienetų skalėje (tiksli vertė nustatoma eksperimentiškai).
+\LIME branduolio plotį \poskyris{sec:literature:lime} gali padėti nustatyti duomenų vizualizacijos ar kita duomenų analizė. Tai atlikti nėra sudėtinga, kai požymių vektoriaus dimensija nedidelė arba požymiai yra skaitiniai, tačiau turint kategorinius požymius ir atsižvelgiant į jų kodavimą dvejetainiais vektoriais, parinkti tinkamą \LIME branduolio plotį gali būti sudėtinga. Taikant \gls{mca} transformaciją neretai užtenka branduolio pločio vertę parinkti pagal pirmų dviejų komponenčių skalę, kadangi šios dvi komponentės apibūdina didžiausią inerciją. Pavyzdžiui, \ref{fig:scree} pav. vaizduojamu atveju, tinkamos $\omega$ vertės turėtų būti vienetų skalėje (tiksli vertė nustatoma eksperimentiškai).
 \begin{figure}[h]
         \centering
         \includegraphics[width=0.55\textwidth]{images/mca_scatter.png}
