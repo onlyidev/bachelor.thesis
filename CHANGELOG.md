@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.2](https://github.com/onlyidev/bachelor.thesis/compare/v1.1.1...v1.1.2) (2025-05-15)
+
+
+### Bug Fixes
+
+* **commands:** parenthesis not in cursive ([61b91b6](https://github.com/onlyidev/bachelor.thesis/commit/61b91b664f165e35aaf8afd7cb6fbe32c1893f70))
+* **images:** Update title ([8c9ec2a](https://github.com/onlyidev/bachelor.thesis/commit/8c9ec2a3fe9cebd9a77823ca01f4367d6b7e2338))
+* Klasifikacijos -&gt; klasifikavimo lenteles ([55eee53](https://github.com/onlyidev/bachelor.thesis/commit/55eee53560c37392043f3195fe5a1d11916d51be))
+* **references:** skyrius -&gt; poskyris ([e7d3ee5](https://github.com/onlyidev/bachelor.thesis/commit/e7d3ee554f661abcc5886f97250be59ce6b58cf0))
+* **references:** skyrius -&gt; skyrelis ([a46dcbd](https://github.com/onlyidev/bachelor.thesis/commit/a46dcbd4523ed3884edb720ba8b8be1cb0feefe8))
+* **results:** Remove word ([bc5fb75](https://github.com/onlyidev/bachelor.thesis/commit/bc5fb7563af3c4410b6e0c3a1c06c82c4489cd21))
+
 ## [1.1.1](https://github.com/onlyidev/bachelor.thesis/compare/v1.1.0...v1.1.1) (2025-05-10)
 
 
