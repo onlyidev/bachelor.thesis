@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/onlyidev/bachelor.thesis/compare/v1.1.2...v1.1.3) (2025-05-21)
+
+
+### Bug Fixes
+
+* Fix ':' spacing in title ([eb2acec](https://github.com/onlyidev/bachelor.thesis/commit/eb2acec9901136d3e4942551624df82d6ef771aa))
+
 ## [1.1.2](https://github.com/onlyidev/bachelor.thesis/compare/v1.1.1...v1.1.2) (2025-05-15)
 
 
